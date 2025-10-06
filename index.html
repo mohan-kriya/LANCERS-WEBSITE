@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kriya Ltd | Organic Crop Care Solutions</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green: #6B9941;
+      --orange: #EA6E26;
+      --dark-green: #2A4E35;
+      --font-heading: 'Cormorant Garamond', serif;
+      --font-body: 'Inter', sans-serif;
+    }
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:var(--font-body); background:#fff; color:#333; line-height:1.6;}
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 70px; background:#fff;
+      box-shadow:0 2px 10px rgba(0,0,0,.05);
+      position:sticky; top:0; z-index:1000;
+    }
+    .navbar img {height:45px;}
+    .nav-menu {display:flex; align-items:center; gap:25px; list-style:none;}
+    .nav-menu a, .dropbtn {
+      text-decoration:none; color:#222; font-weight:500;
+      font-family:var(--font-body); font-size:1rem;
+      background:none; border:none; cursor:pointer; transition:color .3s;
+    }
+    .nav-menu a:hover, .dropbtn:hover {color:var(--orange);}
+    .dropdown {position:relative;}
+    .dropdown-content, .sub-menu {list-style:none;}
+
+    /* First-level dropdown */
+    .dropdown-content {
+      display:none; position:absolute; top:100%; left:0;
+      background:#fff; min-width:220px;
+      box-shadow:0 5px 15px rgba(0,0,0,.1); border-radius:6px; z-index:999;
+    }
+    .dropdown-content li {position:relative; border-bottom:1px solid #eee;}
+    .dropdown-content li:last-child {border-bottom:none;}
+    .dropdown-content a {
+      display:block; padding:10px 14px; color:#333; position:relative;
+    }
+    .dropdown-content a:hover {background:#f4f4f4; color:var(--green);}
+    .dropdown:hover > .dropdown-content {display:block;}
+
+    /* Second-level dropdown */
+    .sub-menu {
+      display:none; position:absolute; top:0; left:100%;
+      min-width:200px; background:#fff;
+      border-radius:6px; box-shadow:0 5px 15px rgba(0,0,0,.1);
+    }
+    .has-sub:hover > .sub-menu {display:block;}
+
+    /* ===== TOOLTIP STYLE ===== */
+    .sub-menu a[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 105%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--green);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1001;
+    }
+
+    /* Responsive menu */
+    @media(max-width:900px){
+      .navbar {flex-direction:column; align-items:flex-start; padding:15px 30px;}
+      .nav-menu {flex-direction:column; width:100%; gap:10px;}
+      .dropdown-content, .sub-menu {position:static; box-shadow:none; width:100%;}
+      .sub-menu a::after {display:none;}
+      .sub-menu a {padding-left:25px;}
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:100px 50px; gap:40px;
+    }
+    .hero-text {flex:1;}
+    .hero-text h1 {
+      font-family:var(--font-heading); color:var(--dark-green);
+      font-size:3rem; margin-bottom:20px;
+    }
+    .hero-text p {color:#555; font-size:1.1rem; margin-bottom:30px;}
+    .badges {display:flex; flex-wrap:wrap; gap:10px; margin-bottom:25px;}
+    .badge {background:var(--green); color:#fff; font-size:.85rem; font-weight:600; padding:6px 14px; border-radius:20px;}
+    .hero-buttons {display:flex; gap:15px;}
+    .btn-primary {background:var(--green); color:#fff; border:none; padding:12px 24px; border-radius:6px; font-weight:600; cursor:pointer; transition:.3s;}
+    .btn-primary:hover {background:#5a8438;}
+    .btn-outline {background:transparent; border:2px solid var(--green); color:var(--green); padding:12px 24px; border-radius:6px; font-weight:600; cursor:pointer; transition:.3s;}
+    .btn-outline:hover {background:var(--green); color:#fff;}
+    .hero-img {flex:1; height:350px; border-radius:10px; background:#eaeaea url('assets/img/placeholders/hero.jpg') center/cover no-repeat;}
+
+    /* ===== SECTIONS ===== */
+    section {padding:80px 0; border-top:1px solid #eee;}
+    .container {max-width:1200px; margin:0 auto; padding:0 50px;}
+
+    /* Why Kriya */
+    .why-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; text-align:center;}
+    .why-card {padding:20px;}
+    .why-card span {font-size:40px; color:var(--green); display:block; margin-bottom:10px;}
+    .why-card h3 {font-family:var(--font-heading); color:var(--dark-green); margin-bottom:10px;}
+
+    /* Tiles */
+    .grid-4 {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; text-align:center;}
+    .tile {border:1px solid #eee; border-radius:10px; overflow:hidden; background:#fff; transition:.3s;}
+    .tile:hover {transform:translateY(-5px); box-shadow:0 5px 15px rgba(0,0,0,.1);}
+    .tile img {width:100%; height:180px; object-fit:cover;}
+    .tile h4 {font-family:var(--font-heading); color:var(--dark-green); margin:15px 0 5px;}
+    .tile p {font-size:.9rem; color:#555; margin-bottom:15px;}
+
+    /* Certifications */
+    .cert-strip {display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; gap:20px;}
+    .cert-strip img {height:50px; filter:grayscale(1); transition:filter .3s;}
+    .cert-strip img:hover {filter:grayscale(0);}
+
+    /* ===== FOOTER ===== */
+    footer {background:#2A4E35; color:#fff; text-align:center; padding:25px 15px; font-size:.9rem;}
+    footer a {color:#fff; margin:0 8px; text-decoration:none; transition:.3s;}
+    footer a:hover {color:var(--orange);}
+  </style>
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <a href="index.html"><img src="assets/img/logo.png" alt="Kriya Ltd" /></a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Products ▾</button>
+        <ul class="dropdown-content">
+          <li class="has-sub">
+            <a href="products/biocontrol.html">Biocontrol ▸</a>
+            <ul class="sub-menu">
+              <li><a href="products/biocontrol/ecoza.html" data-tooltip="Azadirachtin">Ecoza</a></li>
+              <li><a href="products/biocontrol/k-guard.html" data-tooltip="Karanjin">K-Guard</a></li>
+              <li><a href="products/biocontrol/margoshine.html" data-tooltip="Neem Oil">Margoshine</a></li>
+              <li><a href="products/biocontrol/spindura.html" data-tooltip="Spinosad">Spindura</a></li>
+              <li><a href="#" data-tooltip="Neem + Spinosad">MargoSpin</a></li>
+              <li><a href="products/biocontrol/admira.html" data-tooltip="Essential Oils">Admira</a></li>
+              <li><a href="products/biocontrol/weedx.html" data-tooltip="Fatty Acids">WeedX</a></li>
+              <li><a href="products/biocontrol/mycova.html" data-tooltip="Beauveria bassiana">Mycova</a></li>
+              <li><a href="products/biocontrol/rexora.html" data-tooltip="Metarhizium anisopliae">Rexora</a></li>
+              <li><a href="products/biocontrol/biota.html" data-tooltip="Trichoderma spp.">Biota</a></li>
+              <li><a href="products/biocontrol/seira.html" data-tooltip="Verticillium lecanii">Seira</a></li>
+              <li><a href="products/biocontrol/encilo.html" data-tooltip="Paecilomyces lilacinus">EnCilo</a></li>
+              <li><a href="products/biocontrol/neuvita.html" data-tooltip="Ampelomyces quisqualis">Neuvita</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="products/biostimulants.html">Biostimulants ▸</a>
+            <ul class="sub-menu">
+              <li><a href="products/biostimulants/igreen.html" data-tooltip="Microbial Consortium">IGreen</a></li>
+              <li><a href="products/biostimulants/zenita.html" data-tooltip="Neem Proteins & Limonoids">Zenita</a></li>
+              <li><a href="products/biostimulants/cropsia.html" data-tooltip="Moringa + Adathoda Extracts">Cropsia</a></li>
+              <li><a href="products/biostimulants/enrhize.html" data-tooltip="Glomus spp.">Enrhize</a></li>
+              <li><a href="products/biostimulants/orgocare.html" data-tooltip="Plant Extract Blend">Orgocare</a></li>
+              <li><a href="products/biostimulants/blooma.html" data-tooltip="Seaweed Extract">Blooma</a></li>
+              <li><a href="products/biostimulants/envicta.html" data-tooltip="Humic, Fulvic, Amino Acids">Envicta</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="products/substrates.html">Substrates ▸</a>
+            <ul class="sub-menu">
+              <li><a href="products/substrates/maxineem.html" data-tooltip="Neem Cake">Maxineem</a></li>
+              <li><a href="products/substrates/kmix.html" data-tooltip="Karanja Cake">K-Mix</a></li>
+              <li><a href="products/substrates/mystica.html" data-tooltip="Wetting & Spreading Agent">Mystica</a></li>
+              <li><a href="products/substrates/engrow.html" data-tooltip="Seed Coating Agent">Engrow</a></li>
+            </ul>
+          </li>
+
+          <li><a href="products/home-garden.html">Home & Garden</a></li>
+        </ul>
+      </li>
+
+      <li><a href="technology/karyo.html">Technology</a></li>
+      <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Organic Crop Care Solutions – Trusted Inputs for a Growing World</h1>
+      <div class="badges">
+        <div class="badge">Residue-conscious</div>
+        <div class="badge">Certified inputs | B2B Focus</div>
+        <div class="badge">Global Supply</div>
+      </div>
+      <p>Kriya delivers residue-conscious biocontrols, biostimulants, and substrates designed for modern agriculture. Our products are certified, regulatory-ready, and tailored for international distributors seeking reliability and performance.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary">Browse Products</button>
+        <button class="btn-outline">Download Product Catalog</button>
+      </div>
+    </div>
+    <div class="hero-img"></div>
+  </section>
+
+  <!-- ===== WHY KRIYA ===== -->
+  <section>
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:40px;">Why Kriya?</h2>
+      <div class="why-grid">
+        <div class="why-card"><span class="material-symbols-outlined">science</span><h3>R&D Expertise</h3><p>Microbial discovery, plant science, and advanced formulation deliver proven results.</p></div>
+        <div class="why-card"><span class="material-symbols-outlined">verified</span><h3>Certified & Trusted</h3><p>Aligned with EU 2019/1009 and leading organic certifications for compliance.</p></div>
+        <div class="why-card"><span class="material-symbols-outlined">inventory</span><h3>Premium Quality</h3><p>Rigorous QA/QC systems ensure stability, efficacy & shelf-life.</p></div>
+        <div class="why-card"><span class="material-symbols-outlined">handshake</span><h3>Strong Partnerships</h3><p>Collaborating globally for consistent supply and long-term growth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT CATEGORIES ===== -->
+  <section>
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:40px;">Product Categories</h2>
+      <div class="grid-4">
+        <div class="tile"><img src="assets/img/placeholders/biocontrol.jpg" alt=""><h4>Biocontrol</h4><p>Natural crop protection for insects and pathogens.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/biostimulants.jpg" alt=""><h4>Biostimulants</h4><p>Enhance resilience and growth naturally.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/substrates.jpg" alt=""><h4>Substrates</h4><p>Improve soil health and crop establishment.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/homegarden.jpg" alt=""><h4>Home & Garden</h4><p>Eco-friendly solutions for everyday growers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section>
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:40px;">Featured Products</h2>
+      <div class="grid-4">
+        <div class="tile"><img src="assets/img/placeholders/ecoza.jpg" alt=""><h4>Ecoza</h4><p>Neem-based bioinsecticide for broad pest control.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/mycova.jpg" alt=""><h4>Mycova</h4><p>Beauveria bassiana for thrips & whiteflies.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/igreen.jpg" alt=""><h4>IGreen NPK</h4><p>Microbial consortium for soil fertility.</p></div>
+        <div class="tile"><img src="assets/img/placeholders/spindura.jpg" alt=""><h4>Spindura</h4><p>Spinosad-based control of caterpillars & thrips.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section>
+    <div class="container">
+      <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:30px;">Our Certifications</h2>
+      <div class="cert-strip">
+        <img src="assets/img/placeholders/omri.jpg" alt="OMRI">
+        <img src="assets/img/placeholders/ecocert.jpg" alt="Ecocert">
+        <img src="assets/img/placeholders/iso.jpg" alt="ISO">
+        <img src="assets/img/placeholders/gmp.jpg" alt="GMP">
+        <img src="assets/img/placeholders/chemexcil.jpg" alt="Chemexcil">
+        <img src="assets/img/placeholders/shefexil.jpg" alt="SHEFEXIL">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Kriya Ltd | 
+    <a href="about.html">About</a> | 
+    <a href="products/biocontrol.html">Products</a> | 
+    <a href="technology/karyo.html">Technology</a> | 
+    <a href="contact.html">Contact</a> | 
+    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a> | 
+    <a href="https://wa.me/916385848466">WhatsApp</a> | 
+    <a href="https://www.linkedin.com/company/108402158/">LinkedIn</a> | 
+    <a href="https://x.com/kriyabiosys">Twitter</a> | 
+    <a href="https://www.instagram.com/kriyabiosys/">Instagram</a>
+  </footer>
+</body>
+</html>
