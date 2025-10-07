@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neuvita | Ampelomyces quisqualis-Based Biocontrol | Kriya Ltd</title>
+  <meta name="description" content="Neuvita is a biological fungicide based on Ampelomyces quisqualis, providing natural control of powdery mildew through mycoparasitic activity and fungal colonization." />
+  <meta name="keywords" content="Neuvita, Ampelomyces quisqualis, biological fungicide, mycoparasitic fungus, organic disease control, powdery mildew management" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green:#6B9941;
+      --orange:#EA6E26;
+      --dark-green:#2A4E35;
+      --font-heading:'Cormorant Garamond',serif;
+      --font-body:'Inter',sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
+
+    /* Navbar */
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 70px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);position:sticky;top:0;z-index:1000;}
+    .navbar img{height:45px;}
+    .nav-menu{display:flex;gap:25px;align-items:center;list-style:none;}
+    .nav-menu a{text-decoration:none;color:#222;font-weight:500;transition:color .3s;}
+    .nav-menu a:hover{color:var(--orange);}
+
+    /* Hero */
+    .hero{max-width:1000px;margin:80px auto 40px;text-align:center;padding:0 20px;}
+    .hero h1{font-family:var(--font-heading);font-size:2.4rem;color:var(--dark-green);margin-bottom:15px;}
+    .hero p{font-size:1.05rem;color:#555;line-height:1.8;max-width:850px;margin:0 auto;}
+
+    /* Variants Grid */
+    .section-title{text-align:center;font-family:var(--font-heading);color:var(--dark-green);font-size:1.8rem;margin:60px 0 40px 0;}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto;padding:0 40px;}
+    .product-card{background:#fff;border:1px solid #eee;border-radius:15px;text-align:center;padding:30px 20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s ease;}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+    .product-card img{width:200px;height:200px;object-fit:contain;margin-bottom:15px;}
+    .product-card h4{font-family:var(--font-heading);font-size:1.3rem;color:var(--dark-green);margin-bottom:10px;}
+    .product-card p{font-size:0.95rem;color:#555;line-height:1.5;margin-bottom:15px;}
+    .view-btn{background:var(--green);color:#fff;text-decoration:none;padding:10px 25px;border-radius:6px;font-weight:600;font-size:0.9rem;transition:background .3s;display:inline-block;}
+    .view-btn:hover{background:var(--orange);}
+
+    /* Content */
+    .content{max-width:1000px;margin:80px auto;padding:0 30px;}
+    .content h2{font-family:var(--font-heading);color:var(--dark-green);font-size:1.6rem;margin-bottom:10px;}
+    .content h3{font-family:var(--font-heading);color:var(--green);margin-top:35px;margin-bottom:8px;}
+    .content p{color:#555;margin-bottom:15px;font-size:1rem;}
+    .content ul{margin-left:20px;margin-bottom:20px;color:#555;}
+    .content li{margin-bottom:8px;}
+    table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.95rem;}
+    th,td{border:1px solid #e0e0e0;padding:10px;text-align:center;}
+    th{background:#f8f8f8;color:var(--dark-green);}
+    td{color:#333;}
+
+    /* Footer */
+    footer{background:#2A4E35;color:#fff;text-align:center;padding:25px 15px;font-size:.9rem;}
+    footer a{color:#fff;margin:0 8px;text-decoration:none;transition:.3s;}
+    footer a:hover{color:var(--orange);}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../../index.html"><img src="../../assets/img/logo.png" alt="Kriya Ltd"></a>
+    <ul class="nav-menu">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../about.html">About</a></li>
+      <li><a href="../biocontrol.html" style="color:var(--orange);">Products</a></li>
+      <li><a href="../../technology/karyo.html">Technology</a></li>
+      <li><a href="../../contract-manufacturing.html">Contract Manufacturing</a></li>
+      <li><a href="../../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Neuvita — Ampelomyces quisqualis-Based Biocontrol</h1>
+    <p>
+      Neuvita is a biological fungicide containing spores of <em>Ampelomyces quisqualis</em> (1×10<sup>10</sup> CFU/g),
+      a naturally occurring mycoparasitic fungus that effectively suppresses powdery mildew in crops. 
+      It offers preventive and curative action while ensuring residue-free, sustainable disease control.
+    </p>
+  </section>
+
+  <!-- Variants -->
+  <h2 class="section-title">Neuvita Formulations</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="../../assets/img/placeholders/neuvita.jpg" alt="Neuvita">
+      <h4>Neuvita</h4>
+      <p>Liquid formulation of <em>Ampelomyces quisqualis</em> for preventive and curative control of powdery mildew.</p>
+      <a href="../../docs/Neuvita.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h2>Overview</h2>
+    <p>
+      Neuvita introduces a natural approach to managing powdery mildew by harnessing the power of <em>Ampelomyces quisqualis</em>, 
+      a mycoparasitic fungus that parasitizes and destroys mildew colonies on plant surfaces. 
+      It works preventively and curatively, helping growers maintain healthy, residue-free crops.
+    </p>
+
+    <h2>Mode of Action</h2>
+    <img src="../../assets/img/Neuvita.png" alt="Neuvita Mode of Action" style="width:100%;max-width:700px;display:block;margin:20px auto;border-radius:10px;">
+    <p>
+      <em>Ampelomyces quisqualis</em> acts as a mycoparasite of powdery mildew fungi.  
+      Its spores attach to mildew colonies, germinate, and penetrate the hyphae, inhibiting fungal growth and sporulation.  
+      This interrupts the disease cycle and prevents new mildew formation.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Contains viable spores (1×10<sup>10</sup> CFU/g) ensuring high efficacy.</li>
+      <li>Mycoparasitic activity specifically targeting powdery mildew fungi.</li>
+      <li>Both preventive and curative efficacy under field and greenhouse conditions.</li>
+      <li>Safe for beneficial microbes and pollinators.</li>
+      <li>Organic-certifiable and residue-free formulation.</li>
+    </ul>
+
+    <h2>Dosage & Dilution</h2>
+    <table>
+      <tr><th>Formulation</th><th>CFU Count</th><th>Dosage (per acre)</th><th>Dilution</th><th>Spray Interval</th></tr>
+      <tr><td>WP</td><td>1×10<sup>10</sup> CFU/g</td><td>500–1000 g</td><td>2–3 g/L</td><td>7–10 days</td></tr>
+      <tr><td>EC</td><td>1×10<sup>10</sup> CFU/g</td><td>400–500 ml</td><td>1.5–2.5 ml/L</td><td>7–10 days</td></tr>
+    </table>
+
+    <h2>Compatibility</h2>
+    <ul>
+      <li>Compatible with organic foliar fertilizers and botanical extracts.</li>
+      <li>Avoid mixing with fungicides or copper-based products.</li>
+      <li>Apply during early morning or evening under humid conditions for best results.</li>
+    </ul>
+
+    <h2>Target Use & Benefits</h2>
+    <p><strong>Recommended Crops:</strong> Vegetables, fruits, ornamentals, and plantation crops.</p>
+    <p><strong>Target Diseases:</strong> Powdery mildew (all crop species).</p>
+    <p><strong>Key Benefits:</strong> Natural suppression of powdery mildew through mycoparasitism, eco-friendly, and export-compliant solution for sustainable agriculture.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Kriya Ltd | 
+    <a href="../../about.html">About</a> | 
+    <a href="../biocontrol.html">Products</a> | 
+    <a href="../../technology/karyo.html">Technology</a> | 
+    <a href="../../contact.html">Contact</a> | 
+    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a> | 
+    <a href="https://wa.me/916385848466">WhatsApp</a> | 
+    <a href="https://www.linkedin.com/company/108402158/">LinkedIn</a> | 
+    <a href="https://x.com/kriyabiosys">Twitter</a> | 
+    <a href="https://www.instagram.com/kriyabiosys/">Instagram</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,166 @@
+{
+  "Biocontrol": {
+    "Ecoza": [
+      "Max",
+      "Ace",
+      "Rix",
+      "Pro"
+    ],
+    "K-Guard": [
+      "K-Guard",
+      "K-Rix"
+    ],
+    "Margoshine": [
+      "Margoshine 70%",
+      "MargoRix"
+    ],
+    "Spindura": [
+      "Pro",
+      "Rix",
+      "Plus"
+    ],
+    "Admira": [
+      "Adyme",
+      "Adrilic",
+      "Adove",
+      "Admon"
+    ],
+    "WeedX": [],
+    "Mycova": [
+      "EC",
+      "WP"
+    ],
+    "Rexora": [
+      "EC",
+      "WP"
+    ],
+    "Biota": [
+      "V-EC",
+      "V-WP",
+      "H-EC",
+      "H-WP"
+    ],
+    "Seira": [
+      "EC",
+      "WP"
+    ],
+    "Encilo": [
+      "EC",
+      "WP"
+    ],
+    "Neuvita": [
+      "EC",
+      "WP"
+    ]
+  },
+  "Biostimulants": {
+    "IGreen": [
+      "NPK",
+      "Soil+",
+      "Tres"
+    ],
+    "Shield": [],
+    "Zenita": [],
+    "Cropsia": [],
+    "Enrhize": [],
+    "Orgocare": [],
+    "Blooma": [],
+    "Envicta": []
+  },
+  "Substrates": {
+    "Maxineem": [
+      "Neem Cake"
+    ],
+    "K-Mix": [
+      "Karanja Cake"
+    ],
+    "Mystica": [
+      "Wetting & Spreading Agents"
+    ],
+    "Engrow": [
+      "Seed Coating"
+    ]
+  },
+  "Home & Garden": {
+    "Ecoza Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "K-Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "MargoRix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Spindura Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Mycova": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Rexora": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Biota": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Seira": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Encilo": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Neuvita": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Zenita": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Cropsia": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Envicta": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen NPK": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Soil+": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Tres": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Shield": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Adrilic": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Admon": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Adyme": [
+      "WSP Tablets",
+      "RTU Spray"
+    ]
+  }
+}

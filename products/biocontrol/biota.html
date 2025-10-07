@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biota | Trichoderma-Based Biocontrol | Kriya Ltd</title>
+  <link rel="icon" href="/assets/img/logo.jpg">
+  <meta name="description" content="Biota is a biological fungicide based on Trichoderma spp., offering soil disease suppression, root colonization, and plant growth promotion for sustainable farming." />
+  <meta name="keywords" content="Biota, Trichoderma harzianum, Trichoderma viride, biological fungicide, soil biocontrol, organic agriculture, Trichoderma biocontrol agent" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root {
+      --green:#6B9941;
+      --orange:#EA6E26;
+      --dark-green:#2A4E35;
+      --font-heading:'Cormorant Garamond',serif;
+      --font-body:'Inter',sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
+
+    /* Hero */
+    .hero{max-width:1000px;margin:80px auto 40px;text-align:center;padding:0 20px;}
+    .hero h1{font-family:var(--font-heading);font-size:2.4rem;color:var(--dark-green);margin-bottom:15px;}
+    .hero p{font-size:1.05rem;color:#555;line-height:1.8;max-width:850px;margin:0 auto;}
+
+    /* Variants Grid */
+    .section-title{text-align:center;font-family:var(--font-heading);color:var(--dark-green);font-size:1.8rem;margin:60px 0 40px;}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;max-width:1200px;margin:0 auto;padding:0 40px;}
+    .product-card{background:#fff;border:1px solid #eee;border-radius:15px;text-align:center;padding:30px 20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s ease;}
+    .product-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.1);}
+    .product-card img{width:200px;height:200px;object-fit:contain;margin-bottom:15px;}
+    .product-card h4{font-family:var(--font-heading);font-size:1.3rem;color:var(--dark-green);margin-bottom:10px;}
+    .product-card p{font-size:0.95rem;color:#555;line-height:1.5;margin-bottom:15px;}
+    .view-btn{background:var(--green);color:#fff;text-decoration:none;padding:10px 25px;border-radius:6px;font-weight:600;font-size:0.9rem;transition:background .3s;display:inline-block;}
+    .view-btn:hover{background:var(--orange);}
+
+    /* Content */
+    .content{max-width:1000px;margin:80px auto;padding:0 30px;}
+    .content h2{font-family:var(--font-heading);color:var(--dark-green);font-size:1.6rem;margin-bottom:10px;}
+    .content h3{font-family:var(--font-heading);color:var(--green);margin-top:35px;margin-bottom:8px;}
+    .content p{color:#555;margin-bottom:15px;font-size:1rem;}
+    .content ul{margin-left:20px;margin-bottom:20px;color:#555;}
+    .content li{margin-bottom:8px;}
+    table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.95rem;}
+    th,td{border:1px solid #e0e0e0;padding:10px;text-align:center;}
+    th{background:#f8f8f8;color:var(--dark-green);}
+    td{color:#333;}
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">
+                <img src="/assets/img/logo.jpg" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="../biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="../../products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="../../products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="../../products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="../../products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="../../products/biocontrol.html/" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="../../spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="../../margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="../../mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="../../rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="../../biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="../../seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="../../encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="../../neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Biota — Trichoderma-Based Biocontrol</h1>
+    <p>
+      Biota is a biological fungicide and soil enhancer formulated with beneficial <em>Trichoderma</em> species.
+      It provides reliable protection against soil-borne diseases and enhances root vigor, offering sustainable crop health solutions.
+    </p>
+  </section>
+
+  <!-- Variants -->
+  <h2 class="section-title">Biota Variants</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="/assets/img/Biota-V-bottle.png" alt="Biota V">
+      <h4>Biota V-EC (Trichoderma viride EC)</h4>
+      <p>Emulsifiable concentrate formulation of <em>Trichoderma viride</em> for easy foliar and soil use.</p>
+      <a href="../../docs/Biota-V.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
+    </div>
+
+    <div class="product-card">
+      <img src="/assets/img/Biota-H-bottle.png" alt="Biota H ">
+      <h4>Biota H-WP (Trichoderma harzianum WP)</h4>
+      <p>Wettable powder formulation ideal for seed treatment, soil application, and nursery use.</p>
+      <a href="../../docs/Biota-H.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h2>Overview</h2>
+    <p>
+      Biota harnesses the power of <em>Trichoderma viride</em> and <em>Trichoderma harzianum</em> (1×10<sup>8</sup> CFU/g),
+      fungi known for their antagonistic properties against soil-borne pathogens such as <em>Fusarium</em>, <em>Pythium</em>, and <em>Rhizoctonia</em>.
+      It improves plant root strength, nutrient uptake, and overall soil microflora balance.
+    </p>
+
+    <h2>Mode of Action</h2>
+    <img src="../../assets/img/Biota.png" alt="Biota Mode of Action" style="width:100%;max-width:700px;display:block;margin:20px auto;border-radius:10px;">
+    <p>
+      Trichoderma species act through mycoparasitism, competition, and antibiosis.  
+      They parasitize harmful fungi by coiling around their hyphae, releasing enzymes, and degrading cell walls.  
+      Additionally, they promote root growth by producing hormones like auxins and gibberellins.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Contains a high spore count (1×10<sup>8</sup> CFU/g) for efficient soil colonization.</li>
+      <li>Acts as a biological fungicide and a root growth stimulator.</li>
+      <li>Reduces incidence of soil-borne diseases naturally.</li>
+      <li>Improves nutrient uptake and enhances soil fertility.</li>
+      <li>Certified organic-compatible formulation suitable for IPM programs.</li>
+    </ul>
+
+    <h2>Dosage & Dilution</h2>
+    <table>
+      <tr><th>Variant</th><th>Formulation</th><th>CFU Count</th><th>Dosage (per acre)</th><th>Dilution</th><th>Application</th></tr>
+      <tr><td>Biota V-EC</td><td>EC</td><td>1×10<sup>8</sup> CFU/g</td><td>400–500 ml</td><td>1.5–2.5 ml/L</td><td>Soil drench / foliar</td></tr>
+      <tr><td>Biota V-WP</td><td>WP</td><td>1×10<sup>8</sup> CFU/g</td><td>500 g – 1 kg</td><td>2–3 g/L</td><td>Soil drench / seed treatment</td></tr>
+      <tr><td>Biota H-EC</td><td>EC</td><td>1×10<sup>8</sup> CFU/g</td><td>400–500 ml</td><td>1.5–2.5 ml/L</td><td>Soil drench / foliar</td></tr>
+      <tr><td>Biota H-WP</td><td>WP</td><td>1×10<sup>8</sup> CFU/g</td><td>500 g – 1 kg</td><td>2–3 g/L</td><td>Soil drench / root dip</td></tr>
+    </table>
+
+    <h2>Compatibility</h2>
+    <ul>
+      <li>Compatible with organic manures, biofertilizers, and compost teas.</li>
+      <li>Avoid mixing with chemical fungicides and bactericides.</li>
+      <li>Apply during early morning or evening for maximum spore viability.</li>
+    </ul>
+
+    <h2>Target Use & Benefits</h2>
+    <p><strong>Recommended Crops:</strong> Vegetables, pulses, cereals, plantation crops, fruits, and flowers.</p>
+    <p><strong>Target Pathogens:</strong> <em>Fusarium</em>, <em>Rhizoctonia</em>, <em>Pythium</em>, <em>Sclerotium</em>, and other root pathogens.</p>
+    <p><strong>Key Benefits:</strong> Enhances soil health, improves root development, suppresses pathogens naturally, and promotes sustainable yield improvement.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

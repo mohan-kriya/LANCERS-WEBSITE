@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home & Garden | Kriya Ltd</title>
+  <link rel="icon" href="/assets/img/logo.jpg">
+  <meta name="description" content="Kriya’s Home & Garden range brings professional-grade, eco-friendly crop-care technology to home and urban growers through safe, convenient ready-to-use formulations." />
+  <meta name="keywords" content="home garden bio products, organic pest control sprays, eco-friendly garden care, natural plant protection, sustainable home gardening" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root {
+      --green:#6B9941;
+      --orange:#EA6E26;
+      --dark-green:#2A4E35;
+      --font-heading:'Cormorant Garamond',serif;
+      --font-body:'Inter',sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
+
+    /* Hero */
+    .hero{
+      max-width:1000px;margin:80px auto 40px auto;text-align:center;padding:0 20px;
+    }
+    .hero h1{
+      font-family:var(--font-heading);
+      font-size:2.4rem;
+      color:var(--dark-green);
+      margin-bottom:15px;
+    }
+    .hero p{
+      font-size:1.05rem;
+      color:#555;
+      line-height:1.8;
+      max-width:850px;
+      margin:0 auto;
+    }
+
+    /* Section Title */
+    .section-title{
+      text-align:center;
+      font-family:var(--font-heading);
+      color:var(--dark-green);
+      font-size:1.8rem;
+      margin:60px 0 40px 0;
+    }
+
+    /* Product Grid */
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:0 auto 100px auto;
+      padding:0 40px;
+    }
+    .product-card{
+      border:1px solid #eaeaea;
+      border-radius:12px;
+      overflow:hidden;
+      background:#fff;
+      text-align:center;
+      padding:25px 15px;
+      transition:all .3s ease;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+    .product-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+    .product-card img{
+      width:100%;
+      height:160px;
+      object-fit:contain;
+      margin-bottom:15px;
+    }
+    .product-card h4{
+      font-family:var(--font-heading);
+      font-size:1.3rem;
+      color:var(--dark-green);
+      margin-bottom:8px;
+    }
+    .product-card p{
+      font-size:0.95rem;
+      color:#555;
+      line-height:1.5;
+      padding:0 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="products/biocontrol.html/" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Professional-Grade Crop Care, Reimagined for Home and Urban Growers</h1>
+    <p>
+      Kriya’s Home & Garden range brings the reliability of professional agricultural technology into easy-to-use, eco-friendly consumer products.
+      Using the same proven natural actives trusted by commercial growers, these solutions make sustainable plant care simple for gardeners, hobbyists, and landscapers alike.
+      Available in ready-to-use sprays, water-soluble tablets, and other convenient forms, they combine safety, effectiveness, and convenience for everyday use.
+    </p>
+  </section>
+
+  <!-- Product Section -->
+
+  <!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

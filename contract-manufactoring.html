@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contract Manufacturing | Kriya Ltd</title>
+  <link rel="icon" href="/assets/img/logo.jpg">
+  <meta name="description" content="Kriya Ltd provides complete contract manufacturing for sustainable agri-inputs — from extraction and fermentation to formulation, QA/QC, and packaging." />
+  <meta name="keywords" content="contract manufacturing, sustainable agriculture, microbial fermentation, CO2 extraction, organic formulation, eco-friendly packaging" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    :root {
+      --green:#6B9941;
+      --orange:#EA6E26;
+      --dark-green:#2A4E35;
+      --light-bg:#F8F9F6;
+      --font-heading:'Cormorant Garamond',serif;
+      --font-body:'Inter',sans-serif;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
+
+    /* Hero Section */
+    .hero {
+      background:linear-gradient(to right, rgba(107,153,65,0.1), rgba(234,110,38,0.08));
+      text-align:center;
+      padding:100px 20px;
+    }
+    .hero h1 {
+      font-family:var(--font-heading);
+      font-size:2.6rem;
+      color:var(--dark-green);
+      margin-bottom:20px;
+    }
+    .hero p {
+      max-width:900px;
+      margin:0 auto;
+      font-size:1.1rem;
+      color:#555;
+      line-height:1.9;
+    }
+
+    /* Section Titles */
+    section {
+      max-width:1200px;
+      margin:80px auto;
+      padding:0 40px;
+    }
+    h2 {
+      font-family:var(--font-heading);
+      font-size:2rem;
+      color:var(--dark-green);
+      text-align:center;
+      margin-bottom:30px;
+      position:relative;
+    }
+    h2::after {
+      content:'';
+      display:block;
+      width:80px;
+      height:3px;
+      background:var(--green);
+      margin:10px auto 0 auto;
+      border-radius:3px;
+    }
+    p{font-size:1rem;color:#555;margin-bottom:15px;text-align:justify;}
+    ul,ol{color:#555;margin-left:25px;margin-bottom:25px;}
+    li{margin-bottom:8px;}
+
+    /* Capability Cards */
+    .capabilities {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+    .cap-card {
+      background:#fff;
+      border:1px solid #e8e8e8;
+      border-radius:12px;
+      padding:25px 20px;
+      box-shadow:0 3px 12px rgba(0,0,0,0.06);
+      text-align:left;
+      transition:transform .3s, box-shadow .3s;
+    }
+    .cap-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 10px 22px rgba(0,0,0,0.1);
+    }
+    .cap-card h3 {
+      color:var(--green);
+      font-family:var(--font-heading);
+      margin-bottom:10px;
+      font-size:1.3rem;
+    }
+    .cap-card p {
+      font-size:0.96rem;
+      color:#555;
+    }
+
+    /* QA/QC Pill Grid */
+    .pill-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+      margin-top:25px;
+    }
+    .pill {
+      background:#f4f9f3;
+      border-left:5px solid var(--green);
+      padding:15px 20px;
+      border-radius:8px;
+      color:#333;
+      font-size:0.95rem;
+      font-weight:500;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Two-column text layout */
+    .two-col {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .two-col img {
+      width:100%;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+    @media(max-width:900px){
+      .two-col{grid-template-columns:1fr;}
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="products/biocontrol.html/" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>End-to-End Contract Manufacturing for Sustainable Agri-Inputs</h1>
+    <p>
+      Kriya Ltd offers a complete contract manufacturing platform that spans R&D, formulation, microbial fermentation, and eco-friendly packaging.  
+      We partner with agri-tech innovators worldwide to produce residue-conscious, regulatory-compliant, and scalable natural solutions.
+    </p>
+  </section>
+
+  <!-- Core Capabilities -->
+  <section>
+    <h2>Our Core Capabilities</h2>
+    <div class="capabilities">
+      <div class="cap-card">
+        <h3>Supercritical CO₂ Extraction</h3>
+        <p>High-purity actives from botanical sources with no solvent residues — ensuring eco-safe and consistent results.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Solvent & Aqueous Extraction</h3>
+        <p>Scalable extraction technologies for multiple bioactive fractions, optimized for purity and yield.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Microbial Fermentation & Metabolite Extraction</h3>
+        <p>Specialized production of beneficial microbes, spores, and metabolites under controlled conditions.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Formulation & Packing</h3>
+        <p>Customizable dosage forms: EC, SC, WP, WSP, tablets, and RTU sprays, tailored to global regulatory needs.</p>
+      </div>
+      <div class="cap-card">
+        <h3>R&D & Analytical Services</h3>
+        <p>Comprehensive stability studies, assays, and documentation for certification and compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Model -->
+  <section>
+    <h2>Our Engagement Model</h2>
+    <div class="two-col">
+      <div>
+        <ol style="color:#555;line-height:1.8;">
+          <li><strong>Scope:</strong> Define objectives, formulations, and target markets.</li>
+          <li><strong>Feasibility:</strong> Conduct small-scale trials to validate technical and economic potential.</li>
+          <li><strong>Pilot:</strong> Optimize process parameters through intermediate-scale runs.</li>
+          <li><strong>Scale-Up:</strong> Move to commercial production under robust QA/QC systems.</li>
+          <li><strong>Supply:</strong> Deliver consistent, compliant, and traceable production globally.</li>
+        </ol>
+      </div>
+      <img src="assets/img/contract-process.jpg" alt="Kriya Contract Process">
+    </div>
+  </section>
+
+  <!-- QA/QC -->
+  <section style="background:var(--light-bg);padding:70px 40px;">
+    <h2>QA / QC Excellence</h2>
+    <p style="text-align:center;max-width:850px;margin:0 auto 30px auto;">
+      Quality and safety are embedded in every stage of our process.  
+      Each batch is verified to meet international standards for consistency, stability, and efficacy.
+    </p>
+    <div class="pill-grid">
+      <div class="pill">Identity & Assay Verification</div>
+      <div class="pill">Microbial Load Testing</div>
+      <div class="pill">Residual Solvent Analysis</div>
+      <div class="pill">Shelf-life & Stability Validation</div>
+      <div class="pill">Packaging Integrity Checks</div>
+      <div class="pill">Traceability & Batch Documentation</div>
+    </div>
+  </section>
+
+  <!-- Equipment & Packaging -->
+  <section>
+    <h2>Equipment & Packaging</h2>
+    <div class="two-col">
+      <div>
+        <p>
+          Kriya’s manufacturing infrastructure is designed for flexibility and scalability —  
+          from pilot innovations to full commercial runs. With advanced fermentation, extraction, and formulation systems,  
+          we ensure reproducible performance, safety, and compliance across every production batch.
+        </p>
+        <ul>
+          <li><strong>Bulk:</strong> Drums, IBCs, and industrial packs for B2B supply.</li>
+          <li><strong>Retail:</strong> Sachets, bottles, WSP tablets, and RTU sprays with eco-friendly packaging.</li>
+        </ul>
+      </div>
+      <img src="assets/img/contract-equipment.jpg" alt="Kriya Equipment and Packaging">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                </div>
+
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

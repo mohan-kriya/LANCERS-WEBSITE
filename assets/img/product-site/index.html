@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Product Catalog</div>
+    <div class="search">
+      <input id="searchBox" type="search" placeholder="Search products or sub-items…" aria-label="Search products">
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Product navigation">
+      <nav id="menu"></nav>
+    </aside>
+
+    <main id="content" tabindex="-1">
+      <div class="intro">
+        <h1>Welcome</h1>
+        <p>Select any product from the menu to view its sub content (SKUs / variants), built exactly from your image.</p>
+        <figure class="flowchart">
+          <img src="assets/flowchart.png" alt="Reference flow chart">
+          <figcaption>Reference: the flow chart you provided.</figcaption>
+        </figure>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> – Generated from your image.</span>
+  </footer>
+
+  <script>
+    // Embedded data mirrors catalog.json – you may edit either.
+    const CATALOG = {
+  "Biocontrol": {
+    "Ecoza": [
+      "Max",
+      "Ace",
+      "Rix",
+      "Pro"
+    ],
+    "K-Guard": [
+      "K-Guard",
+      "K-Rix"
+    ],
+    "Margoshine": [
+      "Margoshine 70%",
+      "MargoRix"
+    ],
+    "Spindura": [
+      "Pro",
+      "Rix",
+      "Plus"
+    ],
+    "Admira": [
+      "Adyme",
+      "Adrilic",
+      "Adove",
+      "Admon"
+    ],
+    "WeedX": [],
+    "Mycova": [
+      "EC",
+      "WP"
+    ],
+    "Rexora": [
+      "EC",
+      "WP"
+    ],
+    "Biota": [
+      "V-EC",
+      "V-WP",
+      "H-EC",
+      "H-WP"
+    ],
+    "Seira": [
+      "EC",
+      "WP"
+    ],
+    "Encilo": [
+      "EC",
+      "WP"
+    ],
+    "Neuvita": [
+      "EC",
+      "WP"
+    ]
+  },
+  "Biostimulants": {
+    "IGreen": [
+      "NPK",
+      "Soil+",
+      "Tres"
+    ],
+    "Shield": [],
+    "Zenita": [],
+    "Cropsia": [],
+    "Enrhize": [],
+    "Orgocare": [],
+    "Blooma": [],
+    "Envicta": []
+  },
+  "Substrates": {
+    "Maxineem": [
+      "Neem Cake"
+    ],
+    "K-Mix": [
+      "Karanja Cake"
+    ],
+    "Mystica": [
+      "Wetting & Spreading Agents"
+    ],
+    "Engrow": [
+      "Seed Coating"
+    ]
+  },
+  "Home & Garden": {
+    "Ecoza Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "K-Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "MargoRix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Spindura Rix": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Mycova": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Rexora": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Biota": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Seira": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Encilo": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Neuvita": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Zenita": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Cropsia": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Envicta": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen NPK": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Soil+": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Tres": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "IGreen Shield": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Adrilic": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Admon": [
+      "WSP Tablets",
+      "RTU Spray"
+    ],
+    "Admira Adyme": [
+      "WSP Tablets",
+      "RTU Spray"
+    ]
+  }
+};
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
