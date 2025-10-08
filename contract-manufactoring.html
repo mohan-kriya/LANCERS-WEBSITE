@@ -135,6 +135,50 @@
       border-radius:10px;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
     }
+ /* Fix footer spacing - Match previous file style */
+.contract-footer {
+    text-align: center;
+    padding: 1rem 0; /* Reduced from 2rem */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    margin-bottom: 0.5rem; /* Reduced from 1.5rem */
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.contract-footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Fix footer legal spacing */
+.footer-legal {
+    text-align: center;
+    padding-top: 0.75rem; /* Reduced padding */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.footer-legal p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
     @media(max-width:900px){
       .two-col{grid-template-columns:1fr;}
     }
@@ -363,9 +407,13 @@
                 </div>
 
             </div>
+
+            <div class="footer-disclaimer contract-footer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
             
-            <div class="footer-legal">
-                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
+            <div class="footer-legal contract-footer">
+                <p>© Kriya Ltd 2025 | <a href="privacy-policy.html">Privacy Policy</a>
             </div>
         </div>
     </footer>

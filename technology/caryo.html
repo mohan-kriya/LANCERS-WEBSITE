@@ -3,112 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biostimulants | Kriya Ltd</title>
+  <title>Karyo | Advanced Delivery Platform | Kriya Ltd</title>
   <link rel="icon" href="/assets/img/logo.jpg">
-  <meta name="description" content="Kriya’s Biostimulant portfolio enhances nutrient uptake, stress tolerance, and plant growth through microbial and plant-based formulations designed for sustainable agriculture." />
-  <meta name="keywords" content="organic biostimulants, microbial consortia, plant growth enhancers, sustainable agriculture, certified biostimulants, humic fulvic amino formulations" />
+  <meta name="description" content="Karyo is Kriya’s advanced delivery platform for nature-derived actives — transforming botanical and microbial molecules into stable, scalable crop care formulations." />
+  <meta name="keywords" content="Karyo, formulation technology, encapsulation, biocontrol delivery, microbial stability, sustainable agri-inputs" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">  
 
   <style>
     :root {
       --green:#6B9941;
       --orange:#EA6E26;
       --dark-green:#2A4E35;
+      --light-bg:#F8F9F6;
       --font-heading:'Cormorant Garamond',serif;
       --font-body:'Inter',sans-serif;
     }
+
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
 
-
     /* Hero */
     .hero{
-      max-width:1000px;margin:80px auto 40px auto;text-align:center;padding:0 20px;
+      background:linear-gradient(to right, rgba(107,153,65,0.1), rgba(234,110,38,0.1));
+      text-align:center;
+      padding:100px 20px;
     }
     .hero h1{
       font-family:var(--font-heading);
-      font-size:2.4rem;
+      font-size:2.6rem;
       color:var(--dark-green);
-      margin-bottom:15px;
+      margin-bottom:20px;
     }
     .hero p{
       font-size:1.05rem;
       color:#555;
-      line-height:1.8;
-      max-width:850px;
+      max-width:900px;
       margin:0 auto;
+      line-height:1.8;
     }
 
-    /* Section Title */
-    .section-title{
-      text-align:center;
-      font-family:var(--font-heading);
-      color:var(--dark-green);
-      font-size:1.8rem;
-      margin:60px 0 40px 0;
+    /* Sections */
+    section{max-width:1100px;margin:80px auto;padding:0 40px;}
+    h2{font-family:var(--font-heading);font-size:1.9rem;color:var(--dark-green);text-align:center;margin-bottom:25px;}
+    p{color:#555;font-size:1rem;margin-bottom:15px;text-align:justify;}
+    ul{margin-left:25px;color:#555;margin-bottom:25px;}
+    li{margin-bottom:8px;}
+
+    /* Capability Cards */
+    .capabilities{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px;}
+    .cap-card{
+      background:#fff;border:1px solid #eee;border-radius:12px;padding:25px;text-align:left;
+      box-shadow:0 3px 12px rgba(0,0,0,0.05);transition:transform .3s,box-shadow .3s;
+    }
+    .cap-card:hover{transform:translateY(-5px);box-shadow:0 6px 18px rgba(0,0,0,0.1);}
+    .cap-card h3{font-family:var(--font-heading);color:var(--green);margin-bottom:10px;font-size:1.2rem;}
+    .cap-card p{font-size:0.95rem;color:#555;}/* Fix footer spacing - Match previous file style */
+.contract-footer {
+    text-align: center;
+    padding: 1rem 0; /* Reduced from 2rem */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    margin-bottom: 0.5rem; /* Reduced from 1.5rem */
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.contract-footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Fix footer legal spacing */
+.footer-legal {
+    text-align: center;
+    padding-top: 0.75rem; /* Reduced padding */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.footer-legal p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+    @media(max-width:900px){
+      .two-col{grid-template-columns:1fr;}
     }
 
-    /* Product Grid */
-    .product-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-      max-width:1200px;
-      margin:0 auto 100px auto;
-      padding:0 40px;
-    }
-    .product-card{
-      border:1px solid #eaeaea;
-      border-radius:12px;
-      overflow:hidden;
-      background:#fff;
+
+
+    /* Highlight Box */
+    .highlight-box{
+      background:var(--light-bg);
+      padding:40px 30px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
       text-align:center;
-      padding:25px 15px;
-      transition:all .3s ease;
-      box-shadow:0 2px 6px rgba(0,0,0,0.05);
     }
-    .product-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    }
-    .product-card img{
-      width:100%;
-      height:160px;
-      object-fit:contain;
-      margin-bottom:15px;
-    }
-    .product-card h4{
-      font-family:var(--font-heading);
-      font-size:1.3rem;
-      color:var(--dark-green);
-      margin-bottom:8px;
-    }
-    .product-card p{
-      font-size:0.95rem;
-      color:#555;
-      line-height:1.5;
-      padding:0 10px;
-      margin-bottom:20px;
-    }
-    .view-btn{
-      display:inline-block;
-      background:var(--green);
-      color:#fff;
-      font-weight:600;
-      text-decoration:none;
-      padding:10px 25px;
-      border-radius:6px;
-      font-size:0.9rem;
-      transition:background .3s ease;
-    }
-    .view-btn:hover{
-      background:var(--orange);
-    }
+    .highlight-box h3{font-family:var(--font-heading);color:var(--dark-green);margin-bottom:10px;}
+    .highlight-box p{font-size:1rem;color:#555;}
 
   </style>
 </head>
@@ -123,10 +136,10 @@
             
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="../../index.html" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../../about.html" class="nav-link">About</a>
+                    <a href="about.html" class="nav-link">About</a>
                 </li>
                 
 		<!-- Updated Products Dropdown -->
@@ -218,65 +231,61 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Enhance Plant Vitality, Nutrient Efficiency, and Stress Resilience — Naturally</h1>
+    <h1>Transforming Natural Actives into Scalable Crop Solutions</h1>
     <p>
-      Kriya’s Biostimulant range is designed to optimize nutrient uptake, improve abiotic stress tolerance, and promote vigorous plant growth under diverse agro-climatic conditions.
-      Our formulations combine microbial consortia, seaweed bioactives, amino acids, humic–fulvic complexes, and other plant-derived molecules to enhance physiological efficiency from root to canopy.
+      Karyo is Kriya’s advanced delivery platform for nature-derived actives.  
+      We take complex botanical and microbial molecules and convert them into stable, effective formulations ready for commercial-scale agriculture.  
+      Through encapsulation, stabilization, and optimized delivery, Karyo ensures that every product performs consistently across crops and climates.
     </p>
   </section>
 
-  <!-- Product Section -->
-  <h2 class="section-title">Our Biostimulant Products</h2>
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="/assets/img/Igreen-bottle.png" alt="IGreen">
-      <h4>IGreen</h4>
-      <p>Microbial consortium improving soil fertility and nutrient efficiency.</p>
-      <a href="../products/biostimulants/igreen.html" class="view-btn">View Product</a>
+  <!-- Core Capabilities -->
+  <section>
+    <h2>Core Capabilities</h2>
+    <div class="capabilities">
+      <div class="cap-card">
+        <h3>Botanical Actives Formulation</h3>
+        <p>Stabilization of essential oils, neem fractions, and bioactive extracts for enhanced shelf-life and performance.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Microbial Actives Formulation</h3>
+        <p>High-viability formulations for spores, cells, and metabolites ensuring long-term product stability and efficacy.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Advanced Delivery (Encapsulation)</h3>
+        <p>Micro and nano-encapsulation technologies for controlled release and improved compatibility across inputs.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Formulation Science</h3>
+        <p>Balancing efficacy, stability, and shelf-life through formulation optimization and analytical validation.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Sustainability Focus</h3>
+        <p>Use of eco-friendly excipients, biodegradable carriers, and sustainable packaging materials.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="product-card">
-      <img src="/assets/img/Zenita-bottle.png" alt="Zenita">
-      <h4>Zenita</h4>
-      <p>Neem-derived biostimulant promoting vegetative growth and stress tolerance.</p>
-      <a href="../products/biostimulants/zenita.html" class="view-btn">View Product</a>
+  <!-- Target Audience -->
+  <section>
+    <h2>Target Audience</h2>
+    <div class="highlight-box">
+      <h3>For Global Distributors & Agri-Tech Innovators</h3>
+      <p>
+        Karyo empowers international distributors, agri-tech firms, and crop-input companies  
+        to expand their portfolios with differentiated, premium formulations backed by cutting-edge delivery innovation.
+      </p>
     </div>
+  </section>
 
-    <div class="product-card">
-      <img src="/assets/img/Cropsia-bottle.png" alt="Cropsia">
-      <h4>Cropsia</h4>
-      <p>Botanical formulation of Moringa & Adhatoda extracts improving plant vitality.</p>
-      <a href="../products/biostimulants/cropsia.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/placeholders/blooma.jpg" alt="Blooma">
-      <h4>Blooma</h4>
-      <p>Seaweed extract that boosts flowering, fruiting, and yield.</p>
-      <a href="../products/biostimulants/blooma.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="/assets/img/Enrhize-bottle.png" alt="Enrhize">
-      <h4>EnRhize</h4>
-      <p>AMF inoculant (Glomus spp. 1500 propagules/g) enhancing nutrient and water uptake.</p>
-      <a href="../products/biostimulants/enrhize.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="/assets/img/Orgocare-bottle.png" alt="Orgocare">
-      <h4>Orgocare</h4>
-      <p>Plant extract blend supporting stress management and recovery.</p>
-      <a href="../products/biostimulants/orgocare.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="/assets/img/Envicta-bottle.png" alt="Envicta">
-      <h4>Envicta</h4>
-      <p>Humic, fulvic, and amino acid complex enhancing nutrient uptake and soil health.</p>
-      <a href="../products/biostimulants/envicta.html" class="view-btn">View Product</a>
-    </div>
-  </div>
+  <!-- Key Benefit -->
+  <section>
+    <h2>Key Benefit</h2>
+    <p style="text-align:center;max-width:850px;margin:0 auto;">
+      Karyo enables the transition from **lab-scale discovery** to **market-ready crop solutions**, ensuring consistent performance,  
+      regulatory compliance, and scalability — bridging innovation with real-world agricultural impact.
+    </p>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -308,16 +317,17 @@
 
             </div>
 
-            <div class="footer-disclaimer">
+            <div class="footer-disclaimer contract-footer">
                 <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
             </div>
             
-            <div class="footer-legal">
+            <div class="footer-legal contract-footer">
                 <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
     <script src="/assets/js/script.js"></script>
+
 </body>
 </html>
