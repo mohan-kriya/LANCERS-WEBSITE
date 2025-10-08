@@ -27,37 +27,394 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
 
+/* ===== HERO ===== */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-    /* ===== HERO ===== */
-    .hero{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:100px 50px;gap:40px;}
-    .hero-text{flex:1;}
-    .hero-text h1{font-family:var(--font-heading);color:var(--dark-green);font-size:3rem;margin-bottom:20px;}
-    .hero-text p{color:#555;font-size:1.1rem;margin-bottom:30px;}
-    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:25px;}
-    .badge{background:var(--green);color:#fff;font-size:.85rem;font-weight:600;padding:6px 14px;border-radius:20px;}
-    .hero-buttons{display:flex;gap:15px;}
-    .btn-primary{background:var(--green);color:#fff;border:none;padding:12px 24px;border-radius:6px;font-weight:600;cursor:pointer;transition:.3s;}
-    .btn-primary:hover{background:#5a8438;}
-    .btn-outline{background:transparent;border:2px solid var(--green);color:var(--green);padding:12px 24px;border-radius:6px;font-weight:600;cursor:pointer;transition:.3s;}
-    .btn-outline:hover{background:var(--green);color:#fff;}
-    .hero-img{flex:1;height:350px;border-radius:10px;background:#eaeaea url('assets/img/placeholders/hero.jpg') center/cover no-repeat;}
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
 
-    /* ===== SECTIONS ===== */
-    section{padding:80px 0;border-top:1px solid #eee;}
-    .container{max-width:1200px;margin:0 auto;padding:0 50px;}
-    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;text-align:center;}
-    .why-card{padding:20px;}
-    .why-card span{font-size:40px;color:var(--green);display:block;margin-bottom:10px;}
-    .why-card h3{font-family:var(--font-heading);color:var(--dark-green);margin-bottom:10px;}
-    .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;text-align:center;}
-    .tile{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff;transition:.3s;text-decoration:none;display:block;}
-    .tile:hover{transform:translateY(-5px);box-shadow:0 5px 15px rgba(0,0,0,.1);}
-    .tile img{width:100%;height:180px;object-fit:cover;}
-    .tile h4{font-family:var(--font-heading);color:var(--dark-green);margin:15px 0 5px;}
-    .tile p{font-size:.9rem;color:#555;margin-bottom:15px;}
-    .cert-strip{display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:20px;}
-    .cert-strip img{height:50px;filter:grayscale(1);transition:filter .3s;}
-    .cert-strip img:hover{filter:grayscale(0);}
+.hero-text h1 {
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: #555;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin-bottom: 30px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.badge {
+  background: var(--green);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-outline {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  min-width: 160px;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.btn-primary:hover {
+  background: #5a8438;
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  background: #eaeaea url('assets/img/placeholders/hero.jpg') center/cover no-repeat;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 60px 0;
+  border-top: 1px solid #eee;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Why Kriya Section */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.why-card {
+  padding: 20px;
+}
+
+.why-card span {
+  font-size: 40px;
+  color: var(--green);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.why-card h3 {
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* Product Grids - FIXED IMAGE ISSUE */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  text-align: center;
+}
+
+.tile {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: .3s;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.tile-image-container {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.tile-image-container img {
+  max-width: 100%;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tile:hover .tile-image-container img {
+  transform: scale(1.05);
+}
+
+.tile h4 {
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+.tile p {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+
+/* Certifications */
+.cert-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cert-strip img {
+  height: 90px;
+  width: auto;
+  transition: filter .3s;
+  width: auto;
+  max-width: 130px;
+  transition: all 0.3s ease;
+}
+
+/* Section Headings */
+section h2 {
+  font-family: var(--font-heading);
+  color: var(--dark-green);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-text, .hero-img {
+    flex: 100%;
+  }
+  
+  .hero-img {
+    height: 250px;
+    order: -1;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .btn-primary, .btn-outline {
+    min-width: 140px;
+    padding: 10px 20px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .why-grid, .grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .tile-image-container {
+    height: 160px;
+  }
+  
+  .tile-image-container img {
+    max-height: 120px;
+  }
+  
+  .cert-strip {
+    gap: 20px;
+  }
+  
+  .cert-strip img {
+    height: 40px;
+    max-width: 110px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px;
+    gap: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-img {
+    height: 200px;
+  }
+  
+  .badges {
+    justify-content: center;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-outline {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  .why-grid, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .why-card, .tile {
+    padding: 15px;
+  }
+  
+  .tile-image-container {
+    height: 140px;
+  }
+  
+  .tile-image-container img {
+    max-height: 100px;
+  }
+  
+  .cert-strip {
+    gap: 15px;
+  }
+  
+  .cert-strip img {
+    height: 35px;
+    max-width: 100px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero-img {
+    height: 180px;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+  
+  .tile-image-container {
+    height: 120px;
+  }
+  
+  .tile-image-container img {
+    max-height: 80px;
+  }
+  
+  .cert-strip {
+    gap: 10px;
+  }
+  
+  .cert-strip img {
+    height: 30px;
+    max-width: 90px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+  
+  .hero {
+    max-width: 1300px;
+  }
+}
   </style>
 </head>
 
@@ -66,7 +423,7 @@
   <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+                <img src="/assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
             </a>
             
             <ul class="nav-menu">
@@ -180,7 +537,9 @@
         <button class="btn-outline">Download Product Catalog</button>
       </div>
     </div>
-    <div class="hero-img"></div>
+    <div class="hero-img">
+      <img src="" alt="">
+    </div>
   </section>
 
   <!-- WHY KRIYA -->
@@ -201,10 +560,34 @@
     <div class="container">
       <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:40px;">Product Categories</h2>
       <div class="grid-4">
-        <a href="products/biocontrol.html" class="tile"><img src="assets/img/dummy.jpg" alt="Biocontrol"><h4>Biocontrol</h4><p>Natural crop protection for insects and pathogens.</p></a>
-        <a href="products/biostimulants.html" class="tile"><img src="assets/img/placeholders/biostimulants.jpg" alt="Biostimulants"><h4>Biostimulants</h4><p>Enhance resilience and growth naturally.</p></a>
-        <a href="products/substrates.html" class="tile"><img src="assets/img/placeholders/substrates.jpg" alt="Substrates"><h4>Substrates</h4><p>Improve soil health and crop establishment.</p></a>
-        <a href="products/homeandgarden.html" class="tile"><img src="assets/img/placeholders/homegarden.jpg" alt="Home & Garden"><h4>Home & Garden</h4><p>Eco-friendly solutions for everyday growers.</p></a>
+        <a href="products/biocontrol.html" class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/dummy.jpg" alt="Biocontrol">
+          </div>
+          <h4>Biocontrol</h4>
+          <p>Natural crop protection for insects and pathogens.</p>
+        </a>
+        <a href="products/biostimulants.html" class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/placeholders/biostimulants.jpg" alt="Biostimulants">
+          </div>
+          <h4>Biostimulants</h4>
+          <p>Enhance resilience and growth naturally.</p>
+        </a>
+        <a href="products/substrates.html" class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/placeholders/substrates.jpg" alt="Substrates">
+          </div>
+          <h4>Substrates</h4>
+          <p>Improve soil health and crop establishment.</p>
+        </a>
+        <a href="products/homeandgarden.html" class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/placeholders/homegarden.jpg" alt="Home & Garden">
+          </div>
+          <h4>Home & Garden</h4>
+          <p>Eco-friendly solutions for everyday growers.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -214,10 +597,34 @@
     <div class="container">
       <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:40px;">Featured Products</h2>
       <div class="grid-4">
-        <div class="tile"><img src="assets/img/placeholders/ecoza.jpg" alt=""><h4>Ecoza</h4><p>Neem-based bioinsecticide for broad pest control.</p></div>
-        <div class="tile"><img src="assets/img/placeholders/mycova.jpg" alt=""><h4>Mycova</h4><p>Beauveria bassiana for thrips & whiteflies.</p></div>
-        <div class="tile"><img src="assets/img/placeholders/igreen.jpg" alt=""><h4>IGreen NPK</h4><p>Microbial consortium for soil fertility.</p></div>
-        <div class="tile"><img src="assets/img/placeholders/spindura.jpg" alt=""><h4>Spindura</h4><p>Spinosad-based control of caterpillars & thrips.</p></div>
+        <div class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/Ecoza-bottle.png" alt="Ecoza">
+          </div>
+          <h4>Ecoza</h4>
+          <p>Neem-based bioinsecticide for broad pest control.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/Mycova-bottle.png" alt="Mycova">
+          </div>
+          <h4>Mycova</h4>
+          <p>Beauveria bassiana for thrips & whiteflies.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/Igreen-bottle.png" alt="IGreen NPK">
+          </div>
+          <h4>IGreen NPK</h4>
+          <p>Microbial consortium for soil fertility.</p>
+        </div>
+        <div class="tile">
+          <div class="tile-image-container">
+            <img src="assets/img/Spindura-bottle.png" alt="Spindura">
+          </div>
+          <h4>Spindura</h4>
+          <p>Spinosad-based control of caterpillars & thrips.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -227,12 +634,12 @@
     <div class="container">
       <h2 style="font-family:var(--font-heading);color:var(--dark-green);text-align:center;margin-bottom:30px;">Our Certifications</h2>
       <div class="cert-strip">
-        <img src="assets/img/placeholders/omri.jpg" alt="OMRI">
-        <img src="assets/img/placeholders/ecocert.jpg" alt="Ecocert">
-        <img src="assets/img/placeholders/iso.jpg" alt="ISO">
-        <img src="assets/img/placeholders/gmp.jpg" alt="GMP">
-        <img src="assets/img/placeholders/chemexcil.jpg" alt="Chemexcil">
-        <img src="assets/img/placeholders/shefexil.jpg" alt="SHEFEXIL">
+        <img src="assets/img/omri-listed-prod-avail-english-cmyk.png" alt="OMRI">
+        <img src="assets/img/ecocert.svg" alt="Ecocert">
+        <img src="assets/img/iso.svg" alt="ISO">
+        <img src="assets/img/gmp.svg" alt="GMP">
+        <img src="assets/img/chemexcil.svg" alt="Chemexcil">
+        <img src="assets/img/shefexil.svg" alt="SHEFEXIL">
       </div>
     </div>
   </section>
