@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Envicta | Humic, Fulvic & Amino Acid-Based Biostimulant | Kriya Ltd</title>
+  <title>Wynn | Microbial Technology Platform | Kriya Ltd</title>
   <link rel="icon" href="/assets/img/logo.jpg">
-  <meta name="description" content="Envicta is a biostimulant enriched with humic acid, fulvic acid, and amino acids to improve soil fertility, nutrient uptake, and plant stress tolerance." />
-  <meta name="keywords" content="Envicta, humic acid, fulvic acid, amino acids, soil conditioner, organic biostimulant, sustainable agriculture" />
+  <meta name="description" content="Wynn is Kriya’s microbial technology platform, integrating discovery, fermentation, and formulation to deliver next-generation microbial-based agricultural solutions." />
+  <meta name="keywords" content="Wynn, microbial technology, fermentation, bioactive compounds, microbial discovery, agri-input innovation, sustainable agriculture" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
     :root {
       --green:#6B9941;
       --orange:#EA6E26;
       --dark-green:#2A4E35;
+      --light-bg:#F8F9F6;
       --font-heading:'Cormorant Garamond',serif;
       --font-body:'Inter',sans-serif;
     }
@@ -26,31 +27,100 @@
     body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
 
     /* Hero */
-    .hero{max-width:1000px;margin:80px auto 40px;text-align:center;padding:0 20px;}
-    .hero h1{font-family:var(--font-heading);font-size:2.4rem;color:var(--dark-green);margin-bottom:15px;}
-    .hero p{font-size:1.05rem;color:#555;line-height:1.8;max-width:850px;margin:0 auto;}
+    .hero{
+      background:linear-gradient(to right, rgba(107,153,65,0.1), rgba(234,110,38,0.1));
+      text-align:center;
+      padding:100px 20px;
+    }
+    .hero h1{
+      font-family:var(--font-heading);
+      font-size:2.6rem;
+      color:var(--dark-green);
+      margin-bottom:20px;
+    }
+    .hero p{
+      font-size:1.05rem;
+      color:#555;
+      max-width:900px;
+      margin:0 auto;
+      line-height:1.8;
+    }
 
-    /* Variant Card */
-    .section-title{text-align:center;font-family:var(--font-heading);color:var(--dark-green);font-size:1.8rem;margin:60px 0 40px 0;}
-    .product-card{max-width:500px;margin:0 auto 60px auto;background:#fff;border:1px solid #eee;border-radius:15px;text-align:center;padding:30px 20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s ease;}
-    .product-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-    .product-card img{width:200px;height:200px;object-fit:contain;margin-bottom:15px;}
-    .product-card h4{font-family:var(--font-heading);font-size:1.4rem;color:var(--dark-green);margin-bottom:10px;}
-    .product-card p{font-size:0.95rem;color:#555;line-height:1.5;margin-bottom:15px;}
-    .view-btn{background:var(--green);color:#fff;text-decoration:none;padding:10px 25px;border-radius:6px;font-weight:600;font-size:0.9rem;transition:background .3s;display:inline-block;}
-    .view-btn:hover{background:var(--orange);}
+    /* Sections */
+    section{max-width:1100px;margin:80px auto;padding:0 40px;}
+    h2{font-family:var(--font-heading);font-size:1.9rem;color:var(--dark-green);text-align:center;margin-bottom:25px;}
+    p{color:#555;font-size:1rem;margin-bottom:15px;text-align:justify;}
+    ul{margin-left:25px;color:#555;margin-bottom:25px;}
+    li{margin-bottom:8px;}
 
-    /* Content */
-    .content{max-width:1000px;margin:80px auto;padding:0 30px;}
-    .content h2{font-family:var(--font-heading);color:var(--dark-green);font-size:1.6rem;margin-bottom:10px;}
-    .content h3{font-family:var(--font-heading);color:var(--green);margin-top:35px;margin-bottom:8px;}
-    .content p{color:#555;margin-bottom:15px;font-size:1rem;}
-    .content ul{margin-left:20px;margin-bottom:20px;color:#555;}
-    .content li{margin-bottom:8px;}
-    table{width:100%;border-collapse:collapse;margin:20px 0;font-size:0.95rem;border:1px solid #000;}
-    th,td{border:1px solid #000;padding:10px;text-align:center;}
-    th{background:#f8f8f8;color:var(--dark-green);font-weight:600;}
-    td{color:#333;}
+    /* Fix footer spacing - Match previous file style */
+.contract-footer {
+    text-align: center;
+    padding: 1rem 0; /* Reduced from 2rem */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    margin-bottom: 0.5rem; /* Reduced from 1.5rem */
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.contract-footer p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* Fix footer legal spacing */
+.footer-legal {
+    text-align: center;
+    padding-top: 0.75rem; /* Reduced padding */
+    border-top: 1px solid rgba(138, 155, 143, 0.3);
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.footer-legal p {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 auto;
+    color: var(--white);
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+    @media(max-width:900px){
+      .two-col{grid-template-columns:1fr;}
+    }
+
+    /* Capability Cards */
+    .capabilities{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:30px;}
+    .cap-card{
+      background:#fff;border:1px solid #eee;border-radius:12px;padding:25px;text-align:left;
+      box-shadow:0 3px 12px rgba(0,0,0,0.05);transition:transform .3s,box-shadow .3s;
+    }
+    .cap-card:hover{transform:translateY(-5px);box-shadow:0 6px 18px rgba(0,0,0,0.1);}
+    .cap-card h3{font-family:var(--font-heading);color:var(--green);margin-bottom:10px;font-size:1.2rem;}
+    .cap-card p{font-size:0.95rem;color:#555;}
+
+    /* Highlight Box */
+    .highlight-box{
+      background:var(--light-bg);
+      padding:40px 30px;
+      border-radius:10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      text-align:center;
+    }
+    .highlight-box h3{font-family:var(--font-heading);color:var(--dark-green);margin-bottom:10px;}
+    .highlight-box p{font-size:1rem;color:#555;}
 
   </style>
 </head>
@@ -160,73 +230,61 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Envicta — Humic, Fulvic & Amino Acid-Based Biostimulant</h1>
+    <h1>Microbial Innovation — From Discovery to Scale-Up</h1>
     <p>
-      Envicta is a multi-functional soil and plant health enhancer formulated with **humic acid, fulvic acid, and amino acids**.  
-      It improves nutrient uptake, enhances soil structure, and boosts plant metabolism for stronger, more resilient growth.
-      Envicta supports both foliar and soil applications for all crop types.
+      Wynn is Kriya’s microbial technology platform — engineered to harness the full potential of beneficial microorganisms.  
+      From discovery and screening to fermentation and formulation, Wynn integrates every stage of microbial product development  
+      to deliver high-performing, scalable, and compliant biotechnological solutions for global agriculture.
     </p>
   </section>
 
-  <!-- Variant Card -->
-  <h2 class="section-title">Envicta Formulation</h2>
-  <div class="product-card">
-    <img src="/assets/img/Envicta-bottle.png" alt="Envicta">
-    <h4>Envicta (SL / WSP)</h4>
-    <p>Liquid and water-soluble formulations providing balanced humic–fulvic–amino acid nutrition for crop vitality and soil health.</p>
-    <a href="../../docs/Envicta.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
-  </div>
+  <!-- Core Capabilities -->
+  <section>
+    <h2>Core Capabilities</h2>
+    <div class="capabilities">
+      <div class="cap-card">
+        <h3>Microbial Discovery</h3>
+        <p>Identification and selection of high-performing PGPR, AMF, and entomopathogenic strains with proven agronomic benefits.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Bioactive Compound Identification</h3>
+        <p>Profiling metabolites and enzymes that enhance plant growth, pathogen suppression, and soil health.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Fermentation Technology</h3>
+        <p>Solid-state and liquid fermentation systems optimized for yield, viability, and consistency across microbial species.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Metabolite Extraction & Purification</h3>
+        <p>Advanced recovery of secondary metabolites and bioactive fractions for enhanced biocontrol and biostimulant efficacy.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Media Optimization & Proprietary Formulation</h3>
+        <p>Custom formulation strategies that ensure maximum microbial activity, stability, and field performance.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Content -->
-  <div class="content">
-    <h2>Overview</h2>
-    <p>
-      Envicta enhances soil organic matter and nutrient uptake efficiency through its synergistic blend of humic, fulvic, and amino acids.  
-      It improves root growth, nutrient mobility, and soil microbial activity — resulting in improved plant vigor, yield, and quality.
+  <!-- Target Audience -->
+  <section>
+    <h2>Target Audience</h2>
+    <div class="highlight-box">
+      <h3>For Distributors, Agri-Tech Companies & Manufacturers</h3>
+      <p>
+        Wynn supports agri-tech innovators and global input manufacturers  
+        seeking robust, compliant microbial products that combine scientific validation with scalability and commercial readiness.
+      </p>
+    </div>
+  </section>
+
+  <!-- Key Benefit -->
+  <section>
+    <h2>Key Benefit</h2>
+    <p style="text-align:center;max-width:850px;margin:0 auto;">
+      Wynn accelerates the journey from microbial discovery to market launch — enabling the development of next-generation microbial solutions  
+      that are consistent, compliant, and effective in diverse agro-climatic conditions.
     </p>
-
-    <h2>Mode of Action</h2>
-    <img src="../../assets/img/dummy.jpg" alt="Envicta Mode of Action" style="width:100%;max-width:700px;display:block;margin:20px auto;border-radius:10px;">
-    <p>
-      Humic and fulvic acids act as natural chelators, improving nutrient absorption and cation exchange capacity in soil.  
-      Amino acids function as precursors for plant hormones, stimulating enzymatic activity and chlorophyll synthesis.
-      Together, they create a dynamic soil–plant interaction for optimal growth.
-    </p>
-
-    <h2>Key Features</h2>
-    <ul>
-      <li>Improves soil organic carbon and fertility over time.</li>
-      <li>Enhances nutrient uptake and root growth.</li>
-      <li>Boosts stress resistance and plant metabolism.</li>
-      <li>Safe for all crop stages and organic farming.</li>
-      <li>Compatible with fertilizers, foliar nutrients, and most crop protection inputs.</li>
-    </ul>
-
-    <h2>Dosage & Dilution</h2>
-    <table>
-      <tr>
-        <th>Formulation</th>
-        <th>Rate / Acre</th>
-        <th>Dilution</th>
-      </tr>
-      <tr>
-        <td>SL / WSP</td>
-        <td>500–1000 ml / g</td>
-        <td>2–3 ml or g / L</td>
-      </tr>
-    </table>
-
-    <h2>Compatibility</h2>
-    <ul>
-      <li>Compatible with fertilizers, micronutrients, and most biostimulants.</li>
-      <li>Avoid mixing with strong oxidizers or alkaline compounds.</li>
-      <li>Store sealed in a cool, dry place away from sunlight.</li>
-    </ul>
-
-    <h2>Target Use & Benefits</h2>
-    <p><strong>Recommended Crops:</strong> Vegetables, fruits, cereals, pulses, plantation, and ornamental crops.</p>
-    <p><strong>Benefits:</strong> Improves soil structure, enhances nutrient uptake, promotes balanced plant growth, and increases overall productivity in a sustainable way.</p>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -258,16 +316,17 @@
 
             </div>
 
-            <div class="footer-disclaimer">
+            <div class="footer-disclaimer contract-footer">
                 <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
             </div>
             
-            <div class="footer-legal">
+            <div class="footer-legal contract-footer">
                 <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
     <script src="/assets/js/script.js"></script>
+
 </body>
 </html>
