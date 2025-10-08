@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home & Garden | Kriya Ltd</title>
+  <meta name="description" content="Kriya Home & Garden brings eco-friendly crop care technology to home growers. Explore our ready-to-use and capsule-based natural plant protection solutions." />
+  <meta name="keywords" content="Home garden biocontrol, ready to use spray, capsules, organic plant care, Kriya home garden" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green:#6B9941;
+      --orange:#EA6E26;
+      --dark-green:#2A4E35;
+      --light-bg:#F8F9F6;
+      --font-heading:'Cormorant Garamond',serif;
+      --font-body:'Inter',sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
+
+    /* Navbar */
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 70px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);position:sticky;top:0;z-index:1000;}
+    .navbar img{height:45px;}
+    .nav-menu{display:flex;gap:25px;align-items:center;list-style:none;}
+    .nav-menu a{text-decoration:none;color:#222;font-weight:500;transition:color .3s;}
+    .nav-menu a:hover{color:var(--orange);}
+
+    /* Hero */
+    .hero{max-width:1000px;margin:80px auto 40px;text-align:center;padding:0 20px;}
+    .hero h1{font-family:var(--font-heading);font-size:2.4rem;color:var(--dark-green);margin-bottom:15px;}
+    .hero p{font-size:1.05rem;color:#555;line-height:1.8;max-width:850px;margin:0 auto;}
+
+    /* Category Boxes */
+    .category-section {
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
+      gap:40px;
+      flex-wrap:wrap;
+      margin:60px auto;
+      max-width:900px;
+      text-align:center;
+      padding:0 20px;
+    }
+    .category-box {
+      flex:1 1 280px;
+      background:#fff;
+      border:2px solid var(--green);
+      border-radius:12px;
+      padding:40px 20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      text-align:center;
+      transition:all .3s ease;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+    }
+    .category-box:hover {
+      transform:translateY(-5px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.1);
+      border-color:var(--orange);
+    }
+    .category-box h2 {
+      font-family:var(--font-heading);
+      font-size:1.8rem;
+      color:var(--dark-green);
+      margin-bottom:10px;
+    }
+    .category-box p {
+      color:#555;
+      font-size:0.95rem;
+      max-width:300px;
+      margin:0 auto 25px;
+    }
+    .view-btn {
+      display:inline-block;
+      background:var(--green);
+      color:#fff;
+      font-weight:600;
+      text-decoration:none;
+      padding:10px 25px;
+      border-radius:6px;
+      font-size:0.9rem;
+      transition:background .3s ease;
+      align-self:center;
+    }
+    .view-btn:hover { background:var(--orange); }
+
+    /* Footer */
+    footer{
+      background:#2A4E35;
+      color:#fff;
+      text-align:center;
+      padding:25px 15px;
+      font-size:.9rem;
+    }
+    footer a{color:#fff;margin:0 8px;text-decoration:none;transition:.3s;}
+    footer a:hover{color:var(--orange);}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html"><img src="../assets/img/logo.png" alt="Kriya Ltd"></a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../products/biocontrol.html">Products</a></li>
+      <li><a href="../technology/karyo.html">Technology</a></li>
+      <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Eco-Friendly Crop Care for Everyday Growers</h1>
+    <p>
+      Kriya Home & Garden brings the science of sustainable agriculture to your garden.  
+      Our easy-to-use ready sprays and innovative capsules make natural plant care simple, effective, and safe for people and the planet.
+    </p>
+  </section>
+
+  <!-- Two Category Boxes -->
+  <section class="category-section">
+    <div class="category-box">
+      <div>
+        <h2>Ready to Use</h2>
+        <p>Pre-formulated organic sprays for instant, safe protection against common garden pests.</p>
+      </div>
+      <a href="./products/home&garden/home&garden-RTU.html" class="view-btn">View Products</a>
+    </div>
+
+    <div class="category-box">
+      <div>
+        <h2>Capsules</h2>
+        <p>Smart capsule technology delivering active ingredients directly to the plant and soil.</p>
+      </div>
+      <a href="./products/home&garden/home&garden-CAPS.html" class="view-btn">View Products</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Kriya Ltd | 
+    <a href="../about.html">About</a> | 
+    <a href="../products/biocontrol.html">Products</a> | 
+    <a href="../technology/karyo.html">Technology</a> | 
+    <a href="../contract-manufacturing.html">Contract Manufacturing</a> | 
+    <a href="../contact.html">Contact</a> | 
+    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a> | 
+    <a href="https://wa.me/916385848466">WhatsApp</a> | 
+    <a href="https://www.linkedin.com/company/108402158/">LinkedIn</a> | 
+    <a href="https://x.com/kriyabiosys">Twitter</a> | 
+    <a href="https://www.instagram.com/kriyabiosys/">Instagram</a>
+  </footer>
+</body>
+</html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Kriya Ltd</title>
   <link rel="icon" href="/assets/img/logo.jpg">
-  <meta name="description" content="Kriya Ltd's Privacy Policy - Learn how we collect, use, and protect your personal information in compliance with data protection regulations." />
-  <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, Kriya Ltd privacy" />
+  <meta name="description" content="Kriya Ltd's Privacy Policy - Learn how we collect, use, and protect your personal information." />
+  <meta name="keywords" content="privacy policy, data protection, Kriya Ltd privacy" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -27,29 +27,60 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
 
-    /* Policy Content */
+    /* OMEX Style Policy */
     .policy-container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 120px auto 80px;
-      padding: 0 40px;
+      padding: 0 20px;
     }
 
+    /* Change link colors to normal text color */
+.policy-container a {
+    color: #555 !important; /* Same as normal text color */
+    text-decoration: none !important;
+    border-bottom: 1px solid #555;
+    transition: all 0.3s ease;
+}
+
+.policy-container a:hover {
+    color: var(--dark-green) !important; /* Dark green on hover */
+}
+
+/* Specific styling for email and phone links */
+.contact-details a {
+    color: #555 !important;
+    text-decoration: none !important;
+}
+
+.contact-details a:hover {
+    color: var(--dark-green) !important;
+}
+
     .policy-header {
-      text-align: center;
       margin-bottom: 50px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 30px;
     }
 
     .policy-header h1 {
       font-family: var(--font-heading);
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: var(--dark-green);
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
-    .last-updated {
-      color: #666;
-      font-size: 0.95rem;
-      font-style: italic;
+    .policy-intro {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .policy-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
 
     .policy-section {
@@ -57,82 +88,100 @@
     }
 
     .policy-section h2 {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
+      font-family: var(--font-body);
+      font-size: 1.8rem;
       color: var(--dark-green);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-weight: 600;
       padding-bottom: 10px;
-      border-bottom: 2px solid var(--green);
+      border-bottom: 1px solid #e0e0e0;
     }
 
     .policy-section h3 {
       font-family: var(--font-body);
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: var(--green);
-      margin: 25px 0 15px 0;
+      margin: 30px 0 15px 0;
+      font-weight: 600;
     }
 
     .policy-section p {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: #555;
       text-align: left;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .policy-section ul, .policy-section ol {
       margin-left: 25px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: #555;
     }
 
     .policy-section li {
-      margin-bottom: 10px;
-      line-height: 1.6;
+      margin-bottom: 12px;
+      line-height: 1.7;
+      font-size: 1rem;
     }
 
-    .contact-info {
-      background: var(--light-bg);
-      padding: 25px;
-      border-radius: 10px;
-      margin-top: 30px;
+    .contact-details {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 40px;
       border-left: 4px solid var(--green);
     }
 
-    .contact-info h3 {
+    .contact-details h3 {
       margin-top: 0 !important;
+      color: var(--dark-green) !important;
     }
 
-    /* Table for data categories */
     .data-table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
       font-size: 0.95rem;
-    }
-
-    .data-table th, .data-table td {
+      background: #fff;
       border: 1px solid #e0e0e0;
-      padding: 12px 15px;
-      text-align: left;
     }
 
     .data-table th {
-      background: var(--light-bg);
+      background: #f8f9fa;
       color: var(--dark-green);
       font-weight: 600;
+      padding: 15px;
+      text-align: left;
+      border-bottom: 2px solid #e0e0e0;
     }
 
-    .data-table tr:nth-child(even) {
-      background: #f9f9f9;
+    .data-table td {
+      padding: 15px;
+      border-bottom: 1px solid #e0e0e0;
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .highlight {
+      background: #fff9e6;
+      padding: 20px;
+      border-left: 4px solid var(--orange);
+      margin: 20px 0;
+      border-radius: 4px;
     }
 
     @media (max-width: 768px) {
       .policy-container {
         margin: 100px auto 60px;
-        padding: 0 20px;
+        padding: 0 15px;
       }
       
       .policy-header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       
       .data-table {
@@ -140,7 +189,7 @@
       }
       
       .data-table th, .data-table td {
-        padding: 8px 10px;
+        padding: 10px 8px;
       }
     }
   </style>
@@ -149,205 +198,237 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="../index.html" class="nav-logo">
-        <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
-      </a>
-      
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="../about.html" class="nav-link">About</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
-          <!-- Products dropdown content -->
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
-          <!-- Technology dropdown content -->
-        </li>
-        <li class="nav-item"><a href="../contract-manufacturing.html" class="nav-link">Contract Manufacturing</a></li>
-        <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="/assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="products/biocontrol.html/" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
     </div>
-  </nav>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
   <!-- Privacy Policy Content -->
   <div class="policy-container">
     <div class="policy-header">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last Updated: January 2025</p>
+      <p class="policy-intro">
+        Kriya Ltd is committed to protecting and respecting your privacy. This Policy sets out the basis on which we collect personal data from you and the way in which it will be processed by Kriya. Please take the time to read this policy carefully, as it lays out the views and practices of Kriya regarding your personal data and how it will be treated.
+      </p>
+      <p>
+        For the purposes of the relevant data protection legislation, the prime controller of the data (or data controller) is Kriya Ltd, 233, Aarthi Nagar, Mohan Nagar, Narasothipatti, Salem, Tamil Nadu 636004, India. Questions, comments and requests regarding this Policy are welcomed and should be addressed to <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>.
+      </p>
     </div>
 
-    <div class="policy-section">
-      <h2>1. Introduction</h2>
-      <p>Kriya Ltd ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://kriya.ltd">kriya.ltd</a> and use our services.</p>
-      <p>By accessing our website and using our services, you consent to the practices described in this Privacy Policy.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>2. Information We Collect</h2>
-      
-      <h3>2.1 Personal Information</h3>
-      <p>We may collect the following types of personal information:</p>
-      <table class="data-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Examples</th>
-            <th>Purpose</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Contact Information</td>
-            <td>Name, email address, phone number, company name</td>
-            <td>Communication, customer support, business inquiries</td>
-          </tr>
-          <tr>
-            <td>Professional Information</td>
-            <td>Job title, industry, company size</td>
-            <td>Service customization, business development</td>
-          </tr>
-          <tr>
-            <td>Technical Information</td>
-            <td>IP address, browser type, device information</td>
-            <td>Website analytics, security, improvement</td>
-          </tr>
-          <tr>
-            <td>Communication Data</td>
-            <td>Email correspondence, contact form submissions</td>
-            <td>Customer service, record keeping</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h3>2.2 Automatically Collected Information</h3>
-      <p>When you visit our website, we automatically collect certain information through cookies and similar technologies:</p>
-      <ul>
-        <li>IP address and general location</li>
-        <li>Browser type and version</li>
-        <li>Pages visited and time spent on pages</li>
-        <li>Referring website and exit pages</li>
-        <li>Clickstream data and browsing patterns</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>3. How We Use Your Information</h2>
-      <p>We use the collected information for the following purposes:</p>
-      <ul>
-        <li><strong>Service Provision:</strong> To provide and maintain our services, process inquiries, and deliver products</li>
-        <li><strong>Communication:</strong> To respond to your inquiries, provide customer support, and send important updates</li>
-        <li><strong>Business Operations:</strong> To improve our website, develop new products, and conduct market research</li>
-        <li><strong>Legal Compliance:</strong> To comply with legal obligations and protect our legal rights</li>
-        <li><strong>Marketing:</strong> To send promotional materials about our products and services (with your consent where required)</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>4. Legal Basis for Processing</h2>
-      <p>We process your personal information based on the following legal grounds:</p>
-      <ul>
-        <li><strong>Consent:</strong> When you have given clear consent for specific purposes</li>
-        <li><strong>Contractual Necessity:</strong> When processing is necessary for fulfilling our contractual obligations</li>
-        <li><strong>Legal Obligation:</strong> When processing is necessary to comply with legal requirements</li>
-        <li><strong>Legitimate Interests:</strong> When processing is necessary for our legitimate business interests</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>5. Data Sharing and Disclosure</h2>
-      <p>We may share your information with:</p>
-      <ul>
-        <li><strong>Service Providers:</strong> Trusted third-party vendors who assist us in operating our website and business</li>
-        <li><strong>Business Partners:</strong> Partners involved in delivering our products and services</li>
-        <li><strong>Legal Authorities:</strong> When required by law or to protect our rights and safety</li>
-        <li><strong>Business Transfers:</strong> In connection with mergers, acquisitions, or sale of assets</li>
-      </ul>
-      <p>We require all third parties to respect the security of your personal data and to treat it in accordance with the law.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>6. Data Security</h2>
-      <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
-      <ul>
-        <li>Encryption of sensitive data</li>
-        <li>Regular security assessments</li>
-        <li>Access controls and authentication procedures</li>
-        <li>Secure network infrastructure</li>
-        <li>Employee training on data protection</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>7. Data Retention</h2>
-      <p>We retain personal information only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. Our retention periods are based on:</p>
-      <ul>
-        <li>The amount, nature, and sensitivity of the personal data</li>
-        <li>The potential risk of harm from unauthorized use or disclosure</li>
-        <li>The purposes for which we process the data</li>
-        <li>Applicable legal requirements</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>8. Your Rights</h2>
-      <p>Depending on your location, you may have the following rights regarding your personal information:</p>
-      <ul>
-        <li><strong>Access:</strong> The right to access and receive a copy of your personal data</li>
-        <li><strong>Rectification:</strong> The right to correct inaccurate or incomplete data</li>
-        <li><strong>Erasure:</strong> The right to have your personal data deleted</li>
-        <li><strong>Restriction:</strong> The right to restrict processing of your data</li>
-        <li><strong>Portability:</strong> The right to receive your data in a structured format</li>
-        <li><strong>Objection:</strong> The right to object to certain types of processing</li>
-        <li><strong>Withdraw Consent:</strong> The right to withdraw consent at any time</li>
-      </ul>
-      <p>To exercise any of these rights, please contact us using the information provided below.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>9. International Data Transfers</h2>
-      <p>As a global company, we may transfer your personal information to countries outside your country of residence. When we do so, we ensure appropriate safeguards are in place to protect your information, including:</p>
-      <ul>
-        <li>Standard contractual clauses approved by relevant authorities</li>
-        <li>Adequacy decisions for countries with approved data protection standards</li>
-        <li>Binding corporate rules for intra-group transfers</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>10. Cookies and Tracking Technologies</h2>
-      <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
-      <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>11. Children's Privacy</h2>
-      <p>Our website and services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If you become aware that a child has provided us with personal information, please contact us immediately.</p>
-    </div>
-
-    <div class="policy-section">
-      <h2>12. Changes to This Privacy Policy</h2>
-      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
-    </div>
-
-    <!-- <div class="policy-section">
-      <h2>13. Contact Us</h2>
-      <div class="contact-info">
-        <h3>Data Protection Officer</h3>
-        <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-        <p><strong>Email:</strong> <a href="mailto:privacy@kriya.ltd">privacy@kriya.ltd</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+916385848466">+91 6385848466</a></p>
-        <p><strong>Address:</strong> Kriya Ltd, [Your Company Address]</p>
-        <p>We will respond to your inquiry within 30 days.</p>
+    <div class="policy-content">
+      <div class="policy-section">
+        <h2>WHEN DO WE COLLECT INFORMATION</h2>
+        <p>We collect information on you:</p>
+        <ul>
+          <li>when you request information from Kriya through our contact form and</li>
+          <li>when we speak to you over the telephone, by email or face-to-face during enquiries.</li>
+        </ul>
       </div>
-    </div> -->
+
+      <div class="policy-section">
+        <h2>TYPES OF PERSONAL DATA WE COLLECT</h2>
+        <p>The information we collect from you when you contact us through our website form includes your name, company name, email address, telephone number, country, and your message or inquiry.</p>
+        
+        <p>We may process your data in the following ways:</p>
+        <ul>
+          <li>to provide you with information about our products and services;</li>
+          <li>to respond to your inquiries and provide customer support;</li>
+          <li>to manage our business relationship with you; and</li>
+          <li>to comply with legal obligations.</li>
+        </ul>
+
+        <div class="highlight">
+          <p><strong>Note:</strong> Unlike many websites, we do not use tracking cookies, analytics tools, or collect any automated information about your browsing behavior. We only collect information that you voluntarily provide through our contact form.</p>
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <h2>COMPUTER INFORMATION</h2>
+        <p>When you visit our website, we do not collect technical information such as your IP address, browser type, or browsing behavior through automated means like cookies or analytics tools. Our website is designed to respect your privacy and only collects information that you explicitly provide.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>WHEN WILL WE SHARE YOUR PERSONAL DATA?</h2>
+        <p>We will not share your personal data with any third parties for marketing purposes. We will share your personal data with the following parties ("Third Parties"), for the following reasons:</p>
+        <ul>
+          <li>selected Third Parties, such as our email service provider (EmailJS), where it is necessary to do so in order to process your contact form submission;</li>
+          <li>professional advisors (including solicitors, accountants and insurers); and</li>
+          <li>other companies and organisations for the purposes of fraud protection and credit risk reduction.</li>
+        </ul>
+        <p>We reserve the right to disclose or share your personal data in order to comply with any legal requirements, enforce our terms and conditions, or to protect the rights, property, or safety of our business and other customers.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>WHERE WILL WE STORE YOUR PERSONAL DATA?</h2>
+        <p>All personal data that you provide to us is stored on our secure servers. We will try to ensure that your data is treated securely and in accordance with this Privacy Policy.</p>
+        <p>Unfortunately, the transmission of information via the internet is not always completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our website and any transmission is made at your own risk. Once we have received your information, we will use strict safeguarding procedures and security features to try to prevent any unauthorised access to your personal data.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>HOW LONG WILL WE KEEP HOLD OF YOUR PERSONAL DATA</h2>
+        <p>We will keep your data for the time we maintain a business relationship with you and for a period of up to 3 years after our last contact. This is to enable us to contact you regarding follow-up inquiries and maintain business records. We will not keep your personal information for any longer than necessary to fulfil our obligations to you or to meet our legitimate business interests or legal requirements.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>YOUR RIGHTS</h2>
+        <p>You have the following rights:</p>
+        <ul>
+          <li>to request that we provide you with a copy of the information we hold about you (a Subject Access Request);</li>
+          <li>to request that we rectify any information we hold about you (Right to Rectification)</li>
+          <li>to request that we erase any information we hold about you (Right to be Forgotten)</li>
+          <li>to restrict the level of processing we carry out with your information (Restriction of Processing)</li>
+          <li>to obtain from us all personal data we hold about you in a structured, machine readable form, and have this information transmitted to another organisation (Data Portability) and</li>
+          <li>to object to our processing your information in certain ways (Right to Object).</li>
+        </ul>
+        <p>You can exercise any of the above rights by emailing us via <a href="mailto:info@kriya.ltd">info@kriya.ltd</a> stating your request. You also have the right to lodge a complaint with the relevant data protection authority if you are unhappy in any way with how we treat your personal information.</p>
+        <p>We will comply with any request made under this section as soon as possible and normally within one month from the date of your request. However, if necessary, for example if your request is particularly complex or we receive a number of similar requests, we may extend this period by an additional two months, but we will notify you if we need to do this.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>RIGHT TO RECTIFICATION</h2>
+        <p>You have the right at any time to ask us to rectify any personal data that we hold for you which is incorrect or incomplete.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>RIGHT TO BE FORGOTTEN</h2>
+        <p>You have the right to ask us to erase the personal data we hold about you in circumstances where:</p>
+        <ul>
+          <li>it is no longer necessary for us to handle your personal data for the purpose for which it was originally collected</li>
+          <li>you have withdrawn your permission for us to hold your personal data (where this was the basis on which it was collected or used)</li>
+          <li>you object to the processing of the data and there is no lawful overriding reason for us to continue processing your personal data</li>
+          <li>the personal data was unlawfully processed or</li>
+          <li>we have to erase your personal data in order to comply with a legal obligation.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>RESTRICTION OF PROCESSING</h2>
+        <p>You can ask us to restrict how we use your data in the following circumstances:</p>
+        <ul>
+          <li>where you believe that the information we hold about you is inaccurate, you can ask that we refrain from using your data until we can verify the accuracy of it</li>
+          <li>where we have unlawfully processed your data, you can ask that we restrict our usage of it rather than erase it completely or</li>
+          <li>where we no longer need to hold your information, but you wish us to retain your information for the purpose of establishing, exercising or defending a legal claim.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2>DATA PORTABILITY</h2>
+        <p>You have the right to obtain from us all personal data which you have provided to us in a structured, commonly used and machine readable form.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2>RIGHT TO OBJECT</h2>
+        <p>You have the right to object, on grounds relating to your particular situation, to our processing of your personal data where we are doing this for the performance of a task carried out in the public interest or where we are carrying out processing for the purposes of legitimate interests pursued by us.</p>
+      </div>
+<!-- 
+      <div class="policy-section">
+        <h2>THIRD PARTY WEBSITES</h2>
+        <p>Our website may contain links to our partner networks and affiliates. If you follow a link to any of these websites, please note that these websites have their own privacy policies and that we do not accept any responsibility or liability for them. We advise you to check these policies before you submit any personal data to these websites.</p>
+      </div> -->
+
+      <!-- <div class="contact-details">
+        <h3>Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:info@kriya.ltd">info@kriya.ltd</a></p>
+        <p><strong>Phone/WhatsApp:</strong> <a href="tel:+916385848466">+91 63858 48466</a></p>
+        <p><strong>Address:</strong> Kriya Ltd, 233, Aarthi Nagar, Mohan Nagar, Narasothipatti, Salem, Tamil Nadu 636004, India</p>
+      </div> -->
+    </div>
   </div>
 
   <!-- Footer -->

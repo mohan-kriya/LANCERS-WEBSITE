@@ -61,6 +61,8 @@
       margin:0 auto 100px auto;
       padding:0 40px;
     }
+
+    /* ✅ Button Alignment Fix */
     .product-card{
       border:1px solid #eaeaea;
       border-radius:12px;
@@ -70,6 +72,11 @@
       padding:25px 15px 35px;
       transition:all .3s ease;
       box-shadow:0 2px 6px rgba(0,0,0,0.05);
+
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      height:100%;
     }
     .product-card:hover{
       transform:translateY(-5px);
@@ -83,7 +90,7 @@
     }
     .product-card h4{
       font-family:var(--font-heading);
-      font-size:1.3rem;
+      font-size:2.1rem;
       color:var(--dark-green);
       margin-bottom:8px;
     }
@@ -93,8 +100,8 @@
       line-height:1.5;
       padding:0 10px;
       margin-bottom:15px;
+      flex-grow:1; /* Equalizes height */
     }
-
     .view-btn {
       display:inline-block;
       background:var(--green);
@@ -105,21 +112,20 @@
       text-decoration:none;
       font-weight:500;
       transition:background 0.3s;
+      margin-top:auto;
+      align-self:center;
     }
-    .view-btn:hover {
-      background:var(--orange);
-    }
+    .view-btn:hover { background:var(--orange); }
 
     .product-card img {
-    height: 180px; /* Increased from 160px */
-    object-fit: contain;
-}
-
+      height: 180px;
+      object-fit: contain;
+    }
   </style>
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- ✅ Original Navigation Bar (Unchanged) -->
   <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
@@ -127,71 +133,10 @@
             </a>
             
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="../../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../../about.html" class="nav-link">About</a>
-                </li>
-                
-		<!-- Updated Products Dropdown -->
-<li class="nav-item dropdown">
-    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
-    <div class="dropdown-menu products-menu">
-        <div class="dropdown-category">
-            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
-                <div class="subcategory-items">
-                    <a href="../products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
-                    <a href="../products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
-                    <a href="../products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
-                    <a href="../products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
-                    <a href="../products/biocontrol/admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
-                    <a href="../products/biocontrol/spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
-                    <a href="../products/biocontrol/margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
-                    <a href="../products/biocontrol/mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
-                    <a href="../products/biocontrol/rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
-                    <a href="../products/biocontrol/biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
-                    <a href="../products/biocontrol/seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
-                    <a href="../products/biocontrol/encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
-                    <a href="../products/biocontrol/neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
-                <div class="subcategory-items">
-                    <a href="../products/Biostimulants/igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
-                    <a href="../products/Biostimulants/zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
-                    <a href="../products/Biostimulants/cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
-                    <a href="../products/Biostimulants/blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
-                    <a href="../products/Biostimulants/enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
-                    <a href="../products/Biostimulants/orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
-                    <a href="../products/Biostimulants/envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
-                <div class="subcategory-items">
-                    <a href="../products/Substrates/maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
-                    <a href="../products/Substrates/k-mix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
-                    <a href="../products/Substrates/mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
-                    <a href="../products/Substrates/engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="home-garden.html">Home & Garden</a>
-        </div>
-    </div>
-</li>
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../about.html" class="nav-link">About</a></li>
 
+<<<<<<< HEAD
 <li class="nav-item dropdown">
     <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
     <div class="dropdown-menu technology-menu">
@@ -204,22 +149,45 @@
         </div>
     </div>
 </li>
+=======
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu products-menu">
+                        <div class="dropdown-category">
+                            <a href="biocontrol.html">Biocontrol</a>
+                        </div>
+                        <div class="dropdown-category">
+                            <a href="biostimulants.html">Biostimulants</a>
+                        </div>
+                        <div class="dropdown-category">
+                            <a href="substrates.html">Substrates</a>
+                        </div>
+                        <div class="dropdown-category">
+                            <a href="home-garden.html">Home & Garden</a>
+                        </div>
+                    </div>
+                </li>
+>>>>>>> f7bb83077aed19139cb7284ba90dc2c6b4932b3c
 
-                <li class="nav-item">
-                    <a href="../contract-manufactoring.html" class="nav-link">Contract Manufacturing</a>
+                <!-- Technology Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu technology-menu">
+                        <div class="dropdown-category"><a href="karyo.html">Karyo</a></div>
+                        <div class="dropdown-category"><a href="wynn.html">Wynn</a></div>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a href="../contact.html" class="nav-link">Contact</a>
-                </li>
+
+                <li class="nav-item"><a href="../contract-manufactoring.html" class="nav-link">Contract Manufacturing</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link">Contact</a></li>
             </ul>
 
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
         </div>
-    </nav>
+  </nav>
 
   <!-- Hero -->
   <section class="hero">
@@ -234,140 +202,46 @@
   <!-- Product Section -->
   <h2 class="section-title">Our Biocontrol Products</h2>
   <div class="product-grid">
-
-    <div class="product-card">
-      <img src="../assets/img/Ecoza-bottle.png" alt="Ecoza">
-      <h4>Ecoza</h4>
-      <p>Neem-based azadirachtin formulation providing broad-spectrum pest control and low residue performance.</p>
-      <a href="../products/biocontrol/ecoza.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/K-Guard-bottle.png" alt="K-Guard">
-      <h4>K-Guard</h4>
-      <p>Pongamia-derived biopesticide rich in karanjin with dual insecticidal and antifungal activity for versatile crop protection.</p>
-      <a href="../products/biocontrol/k-guard.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/margoShine-bottle.png" alt="Margoshine">
-      <h4>Margoshine</h4>
-      <p>Cold-pressed neem oil formulation offering multi-mode pest control and plant vitality enhancement.</p>
-      <a href="../products/biocontrol/margoshine.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Spindura-bottle.png" alt="Spindura">
-      <h4>Spindura</h4>
-      <p>Fermentation-derived spinosad bioinsecticide ensuring rapid knockdown and lasting residual control.</p>
-      <a href="../products/biocontrol/spindura.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/MargoSpin-bottle.png" alt="MargoSpin">
-      <h4>MargoSpin</h4>
-      <p>Synergistic Neem Oil + Spinosad formulation combining repellency and neuroactive action for complete pest management.</p>
-      <a href="../products/biocontrol/margospin.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Admira-bottle.png" alt="Admira">
-      <h4>Admira</h4>
-      <p>Essential oil–based portfolio (Thyme, Garlic, Clove, Cinnamon) providing natural repellency and antifungal protection.</p>
-      <a href="../products/biocontrol/admira.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/WeedX-bottle.png" alt="WeedX">
-      <h4>WeedX</h4>
-      <p>Natural fatty acid herbicide delivering fast-acting, non-selective control of broadleaf weeds and grasses.</p>
-      <a href="../products/biocontrol/weedx.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Mycova-bottle.png" alt="Mycova">
-      <h4>Mycova</h4>
-      <p>Beauveria bassiana–based fungal biocontrol effective against aphids, thrips, and whiteflies in IPM systems.</p>
-      <a href="../products/biocontrol/mycova.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Rexora-bottle.png" alt="Rexora">
-      <h4>Rexora</h4>
-      <p>Metarhizium anisopliae soil-applied entomopathogen targeting root grubs and soil-dwelling pests.</p>
-      <a href="../products/biocontrol/rexora.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/" alt="Biota">
-      <h4>Biota</h4>
-      <p>Trichoderma-based biofungicide suppressing soil-borne pathogens while stimulating root growth and soil health.</p>
-      <a href="../products/biocontrol/biota.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Seira-bottle.png" alt="Seira">
-      <h4>Seira</h4>
-      <p>Verticillium lecanii formulation for selective control of whiteflies and aphids under humid conditions.</p>
-      <a href="../products/biocontrol/seira.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Encilo-bottle.png" alt="EnCilo">
-      <h4>EnCilo</h4>
-      <p>Paecilomyces lilacinus biocontrol offering consistent management of soft-bodied insects across crops.</p>
-      <a href="../products/biocontrol/encilo.html" class="view-btn">View Product</a>
-    </div>
-
-    <div class="product-card">
-      <img src="../assets/img/Neuvita-bottle.png" alt="Neuvita">
-      <h4>Neuvita</h4>
-      <p>Ampelomyces quisqualis mycoparasitic biocontrol that naturally suppresses powdery mildew.</p>
-      <a href="../products/biocontrol/neuvita.html" class="view-btn">View Product</a>
-    </div>
-
+    <div class="product-card"><img src="../assets/img/Ecoza-bottle.png" alt="Ecoza"><h4>Ecoza</h4><p>Neem-based azadirachtin formulation providing broad-spectrum pest control and low residue performance.</p><a href="../products/biocontrol/ecoza.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/K-Guard-bottle.png" alt="K-Guard"><h4>K-Guard</h4><p>Pongamia-derived biopesticide rich in karanjin with dual insecticidal and antifungal activity for versatile crop protection.</p><a href="../products/biocontrol/k-guard.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/margoShine-bottle.png" alt="Margoshine"><h4>Margoshine</h4><p>Cold-pressed neem oil formulation offering multi-mode pest control and plant vitality enhancement.</p><a href="../products/biocontrol/margoshine.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Spindura-bottle.png" alt="Spindura"><h4>Spindura</h4><p>Fermentation-derived spinosad bioinsecticide ensuring rapid knockdown and lasting residual control.</p><a href="../products/biocontrol/spindura.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/MargoSpin-bottle.png" alt="MargoSpin"><h4>MargoSpin</h4><p>Synergistic Neem Oil + Spinosad formulation combining repellency and neuroactive action for complete pest management.</p><a href="../products/biocontrol/margospin.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Admira-bottle.png" alt="Admira"><h4>Admira</h4><p>Essential oil–based portfolio (Thyme, Garlic, Clove, Cinnamon) providing natural repellency and antifungal protection.</p><a href="../products/biocontrol/admira.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/WeedX-bottle.png" alt="WeedX"><h4>WeedX</h4><p>Natural fatty acid herbicide delivering fast-acting, non-selective control of broadleaf weeds and grasses.</p><a href="../products/biocontrol/weedx.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Mycova-bottle.png" alt="Mycova"><h4>Mycova</h4><p>Beauveria bassiana–based fungal biocontrol effective against aphids, thrips, and whiteflies in IPM systems.</p><a href="../products/biocontrol/mycova.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Rexora-bottle.png" alt="Rexora"><h4>Rexora</h4><p>Metarhizium anisopliae soil-applied entomopathogen targeting root grubs and soil-dwelling pests.</p><a href="../products/biocontrol/rexora.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Biota-bottle.png" alt="Biota"><h4>Biota (V/H)</h4><p>Trichoderma-based biofungicide suppressing soil-borne pathogens while stimulating root growth and soil health.</p><a href="../products/biocontrol/biota.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Seira-bottle.png" alt="Seira"><h4>Seira</h4><p>Verticillium lecanii formulation for selective control of whiteflies and aphids under humid conditions.</p><a href="../products/biocontrol/seira.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Encilo-bottle.png" alt="EnCilo"><h4>EnCilo</h4><p>Paecilomyces lilacinus biocontrol offering consistent management of soft-bodied insects across crops.</p><a href="../products/biocontrol/encilo.html" class="view-btn">View Product</a></div>
+    <div class="product-card"><img src="../assets/img/Neuvita-bottle.png" alt="Neuvita"><h4>Neuvita</h4><p>Ampelomyces quisqualis mycoparasitic biocontrol that naturally suppresses powdery mildew.</p><a href="../products/biocontrol/neuvita.html" class="view-btn">View Product</a></div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                
-                <div class="footer-contact">
-                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
-                    <a href="https://wa.me/916385848466">+91 6385848466</a>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
-                        <i class='bx bxl-linkedin'></i>
-                    </a>
-                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
-                        <i class='bx bxl-twitter'></i>
-                    </a>
-                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
-                        <i class='bx bxl-instagram'></i>
-                    </a>
-                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
-                        <i class='bx bxl-youtube'></i>
-                    </a>
-                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
-                        <i class='bx bxl-facebook'></i>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="footer-disclaimer">
-                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
-            </div>
-            
-            <div class="footer-legal">
-                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a>
-            </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-contact">
+          <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+          <a href="https://wa.me/916385848466">+91 6385848466</a>
         </div>
-    </footer>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://x.com/kriyabiosys" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+          <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+          <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+      </div>
+      <div class="footer-legal">
+        <p>© Kriya Ltd 2025 | <a href="/privacy-policy.html">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
 
-    <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
