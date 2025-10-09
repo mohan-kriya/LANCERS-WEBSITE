@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Kriya Ltd</title>
+  <title>Contact | Kriya Ltd</title>
   <link rel="icon" href="/assets/img/logo.jpg">
-  <meta name="description" content="Learn about Kriya Ltd — a leader in organic crop care solutions. We deliver certified biocontrols, biostimulants, and substrates designed for residue-conscious, sustainable agriculture." />
-  <meta name="keywords" content="Kriya Ltd, organic pesticides, biostimulants, sustainable agriculture, eco-friendly crop care" />
+  <meta name="description" content="Contact Kriya Ltd — your partner in sustainable agriculture. Reach our team for product inquiries, distribution partnerships, and contract manufacturing collaborations." />
+  <meta name="keywords" content="Kriya contact, organic pesticides, biostimulants, contract manufacturing, distributors, sustainable crop solutions" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<!-- Main Styles -->
-<link rel="stylesheet" href="assets/css/style.css">
-
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
     :root {
       --green:#6B9941;
       --orange:#EA6E26;
       --dark-green:#2A4E35;
+      --light-bg:#F8F9F6;
       --font-heading:'Cormorant Garamond',serif;
       --font-body:'Inter',sans-serif;
     }
@@ -33,92 +28,111 @@
 
     /* Hero */
     .hero{
+      background:linear-gradient(to right, rgba(107,153,65,0.1), rgba(234,110,38,0.1));
       text-align:center;
-      padding:100px 20px 60px;
-      background:#f9f9f9;
+      padding:100px 20px;
     }
     .hero h1{
       font-family:var(--font-heading);
-      color:var(--dark-green);
       font-size:2.6rem;
-      margin-bottom:15px;
+      color:var(--dark-green);
+      margin-bottom:20px;
     }
     .hero p{
-      max-width:850px;
-      margin:0 auto;
+      font-size:1.05rem;
       color:#555;
-      font-size:1.1rem;
+      max-width:900px;
+      margin:0 auto;
       line-height:1.8;
     }
 
-    /* Sections */
-    section{
-      max-width:1000px;
-      margin:0 auto;
-      padding:60px 20px;
+    /* Contact Container */
+    .contact-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+      gap:40px;
+      max-width:1200px;
+      margin:80px auto;
+      padding:0 40px;
     }
-    h2{
+
+    /* Contact Form */
+    .contact-form{
+      background:#fff;
+      border-radius:10px;
+      padding:30px;
+      box-shadow:0 3px 12px rgba(0,0,0,0.05);
+    }
+    .contact-form h2{
+      font-family:var(--font-heading);
+      color:var(--dark-green);
+      font-size:1.8rem;
+      margin-bottom:20px;
+      text-align:center;
+    }
+    form{display:grid;gap:15px;}
+    label{font-weight:500;color:var(--dark-green);margin-bottom:5px;font-size:0.95rem;}
+    input, select, textarea{
+      width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:6px;font-size:0.95rem;
+      font-family:var(--font-body);transition:border .3s;
+    }
+    input:focus, select:focus, textarea:focus{border-color:var(--green);outline:none;}
+    textarea{min-height:100px;resize:vertical;}
+
+    .submit-btn{
+      background:var(--green);
+      color:#fff;
+      border:none;
+      padding:12px;
+      border-radius:6px;
+      font-weight:600;
+      font-size:1rem;
+      transition:background .3s;
+      cursor:pointer;
+    }
+    .submit-btn:hover{background:var(--orange);}
+
+    /* Contact Info */
+    .contact-info{
+      background:var(--light-bg);
+      border-radius:10px;
+      padding:30px;
+      box-shadow:0 3px 12px rgba(0,0,0,0.05);
+    }
+    .contact-info h2{
       font-family:var(--font-heading);
       color:var(--dark-green);
       font-size:1.8rem;
       margin-bottom:15px;
     }
-    p{color:#555;margin-bottom:25px;}
+    .contact-info p{margin-bottom:10px;color:#555;font-size:1rem;}
+    .contact-info a{color:var(--green);text-decoration:none;font-weight:600;}
+    .contact-info a:hover{color:var(--orange);}
 
-    .values-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-      margin-top:20px;
+    /* Map */
+    .map-section{
+      margin:60px auto 80px auto;
+      max-width:1100px;
+      padding:0 40px;
     }
-    .value-card{
-      background:#fff;
-      border:1px solid #eee;
+    .map-section iframe{
+      width:100%;
+      height:400px;
+      border:none;
       border-radius:10px;
-      padding:20px;
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-      text-align:center;
-      transition:0.3s;
+      box-shadow:0 3px 10px rgba(0,0,0,0.08);
     }
-    .value-card:hover{transform:translateY(-5px);}
-    .value-card h3{
-      font-family:var(--font-heading);
-      color:var(--green);
-      margin-bottom:8px;
-    }
-
-    /* Why Kriya */
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-      text-align:center;
-      margin-top:30px;
-    }
-    .why-card{
-      border:1px solid #eee;
-      border-radius:10px;
-      padding:25px 15px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.05);
-      transition:0.3s;
-    }
-    .why-card:hover{transform:translateY(-5px);}
-    .why-card h4{
-      font-family:var(--font-heading);
-      color:var(--green);
-      margin-bottom:10px;
-    }
-    .why-card p{color:#555;font-size:.95rem;}
 
   </style>
 </head>
 
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
+                <img src="/assets/img/logo.png" alt="Kriya Ltd" style="width: 40%; height: 40%;">
             </a>
             
             <ul class="nav-menu">
@@ -226,80 +240,66 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1>About Kriya Ltd</h1>
-    <p>Kriya Ltd develops and supplies certified organic pesticides, biostimulants, and substrates designed for residue-conscious agriculture. Headquartered in Tamil Nadu, India, we combine science-led R&D with reliable large-scale production to deliver premium solutions for international distributors.</p>
+    <h1>Connect With Our Team</h1>
+    <p>
+      We welcome partnerships with international distributors, research collaborators, and agri-tech innovators.  
+      Contact us to discuss product inquiries, contract manufacturing opportunities, or distribution collaborations.
+    </p>
   </section>
 
-  <!-- Mission & Vision -->
-  <section>
-    <h2>Our Mission</h2>
-    <p>To transform nature-derived actives into effective, compliant, and scalable inputs that enable growers to reduce chemical residues, improve soil health, and achieve sustainable yields.</p>
-
-    <h2>Our Vision</h2>
-    <p>A future where every farmer has access to high-performance crop care solutions that are safe for people, soil, and the planet—supported by trusted partnerships worldwide.</p>
-  </section>
-
-  <!-- Values -->
-  <section>
-    <h2>Our Values</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <h3>Integrity</h3>
-        <p>We ensure every product meets regulatory, quality, and ethical standards.</p>
-      </div>
-      <div class="value-card">
-        <h3>Innovation</h3>
-        <p>We invest in discovery and formulation science to continuously improve efficacy and sustainability.</p>
-      </div>
-      <div class="value-card">
-        <h3>Collaboration</h3>
-        <p>We work hand-in-hand with global distributors to unlock market opportunities.</p>
-      </div>
-      <div class="value-card">
-        <h3>Sustainability</h3>
-        <p>We prioritize eco-friendly inputs that protect natural resources for future generations.</p>
-      </div>
+  <!-- Contact Info + Form -->
+  <section class="contact-container">
+    <!-- Info -->
+    <div class="contact-info">
+      <h2>Contact Details</h2>
+      <p><strong>Address:</strong><br>233, Aarthi Nagar, Mohan Nagar,<br>Narasothipatti, Salem, Tamil Nadu 636004, India</p>
+      <p><strong>Email:</strong> <a href="mailto:info@kriya.ltd">info@kriya.ltd</a></p>
+      <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/916385848466" target="_blank">+91 63858 48466</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/108402158/" target="_blank">Kriya Ltd</a></p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kriyabiosys/" target="_blank">@kriyabiosys</a></p>
     </div>
-  </section>
 
-  <!-- Facilities -->
-  <section>
-    <h2>Our Facilities</h2>
-    <p>Our facilities integrate microbial fermentation, advanced extraction, formulation, and packaging capabilities. With in-house analytical labs and QA/QC systems, we guarantee compliance with EU 2019/1009, organic certifications, and international safety standards.</p>
-  </section>
-
-  <!-- Why Organic -->
-  <section>
-    <h2>Why Organic?</h2>
-    <p>Organic agriculture is more than a market trend—it is a necessity. Rising consumer demand, regulatory pressure on chemical residues, and climate challenges create a global shift toward natural inputs. Our portfolio is built to meet this shift, providing distributors with solutions that are both scientifically validated and market-ready.</p>
-  </section>
-
-  <!-- Distributors -->
-  <section>
-    <h2>How We Work With Distributors</h2>
-    <p>We partner with international distributors who share our commitment to premium, eco-friendly inputs. Our support goes beyond supply: we provide technical documentation, regulatory guidance, marketing collateral, and consistent delivery. This enables our partners to confidently grow their portfolios and strengthen their presence in sustainable agriculture.</p>
-  </section>
-
-  <!-- Why Kriya -->
-  <section>
-    <h2>Why Kriya?</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <h4>Premium Quality</h4>
-        <p>Rigorously tested and validated products.</p>
-      </div>
-      <div class="why-card">
-        <h4>Eco-Friendly</h4>
-        <p>Natural actives with proven performance.</p>
-      </div>
-      <div class="why-card">
-        <h4>Science-Led R&D</h4>
-        <p>Strong pipeline of innovative formulations.</p>
-      </div>
-      <div class="why-card">
-        <h4>Trusted Partner</h4>
-        <p>Reliable supply and responsive support.</p>
-      </div>
+    <!-- Form -->
+    <div class="contact-form">
+      <h2>Contact Sales</h2>
+      <form action="mailto:info@kriya.ltd" method="POST" enctype="text/plain">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required />
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input type="text" id="company" name="Company" required />
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <input type="text" id="country" name="Country" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required />
+        </div>
+        <div>
+          <label for="whatsapp">WhatsApp (optional)</label>
+          <input type="text" id="whatsapp" name="WhatsApp" />
+        </div>
+        <div>
+          <label for="interest">Product Interest</label>
+          <select id="interest" name="Product Interest" required>
+            <option value="">Select a category</option>
+            <option>Biocontrol</option>
+            <option>Biostimulants</option>
+            <option>Substrates</option>
+            <option>Home & Garden</option>
+            <option>Contract Manufacturing</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="Type your message here..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
   </section>
 
@@ -343,6 +343,6 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
