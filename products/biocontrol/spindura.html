@@ -26,22 +26,67 @@
     body{font-family:var(--font-body);color:#333;background:#fff;line-height:1.6;}
 
     /* Hero */
-    .hero{max-width:1000px;margin:80px auto 40px auto;text-align:center;padding:0 20px;}
+    .hero{max-width:1000px;margin:80px auto 40px;text-align:center;padding:0 20px;}
     .hero h1{font-family:var(--font-heading);font-size:2.4rem;color:var(--dark-green);margin-bottom:15px;}
     .hero p{font-size:1.05rem;color:#555;line-height:1.8;max-width:850px;margin:0 auto;}
 
-    /* Variants Grid */
-    .section-title{text-align:center;font-family:var(--font-heading);color:var(--dark-green);font-size:1.8rem;margin:60px 0 40px 0;}
-    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;max-width:1200px;margin:0 auto;padding:0 40px;}
-    .product-card{background:#fff;border:1px solid #eee;border-radius:15px;text-align:center;padding:30px 20px;box-shadow:0 2px 10px rgba(0,0,0,0.05);transition:all .3s ease;}
+    /* Section Title */
+    .section-title{text-align:center;font-family:var(--font-heading);color:var(--dark-green);font-size:1.8rem;margin:60px 0 40px;}
+
+    /* ✅ Product Grid + Button Alignment Fix */
+    .product-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 40px;
+    }
+    .product-card{
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:15px;
+      text-align:center;
+      padding:30px 20px;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+      transition:all .3s ease;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      height:100%;
+    }
     .product-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-    .product-card img{width:300px;height:300px;object-fit:contain;margin-bottom:15px;}
+    .product-card img{
+      width:300px;
+      height:300px;
+      object-fit:contain;
+      margin:0 auto 15px auto;
+      display:block;
+    }
     .product-card h4{font-family:var(--font-heading);font-size:1.3rem;color:var(--dark-green);margin-bottom:10px;}
-    .product-card p{font-size:0.95rem;color:#555;line-height:1.5;margin-bottom:15px;}
-    .view-btn{background:var(--green);color:#fff;text-decoration:none;padding:10px 25px;border-radius:6px;font-weight:600;font-size:0.9rem;transition:background .3s;display:inline-block;margin-top:5px;}
+    .product-card p{
+      font-size:0.95rem;
+      color:#555;
+      line-height:1.5;
+      margin-bottom:15px;
+      flex-grow:1; /* ensures cards are same height */
+    }
+    .view-btn{
+      background:var(--green);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 25px;
+      border-radius:6px;
+      font-weight:600;
+      font-size:0.9rem;
+      transition:background .3s;
+      display:inline-block;
+      margin-top:auto;
+      align-self:center;
+    }
     .view-btn:hover{background:var(--orange);}
 
-    /* Content Sections */
+    /* Content */
     .content{max-width:1000px;margin:80px auto;padding:0 30px;}
     .content h2{font-family:var(--font-heading);color:var(--dark-green);font-size:1.6rem;margin-bottom:10px;}
     .content h3{font-family:var(--font-heading);color:var(--green);margin-top:35px;margin-bottom:8px;}
@@ -52,7 +97,6 @@
     th,td{border:1px solid #e0e0e0;padding:10px;text-align:center;}
     th{background:#f8f8f8;color:var(--dark-green);}
     td{color:#333;}
-
   </style>
 </head>
 
@@ -77,7 +121,7 @@
     <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
     <div class="dropdown-menu products-menu">
         <div class="dropdown-category">
-            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <a href="../biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
             <div class="subcategory-menu">
                 <div class="subcategory-items">
                     <a href="../biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
@@ -117,7 +161,7 @@
             <div class="subcategory-menu">
                 <div class="subcategory-items">
                     <a href="../Substrates/maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
-                    <a href="../Substrates/kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="../Substrates/k-mix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
                     <a href="../Substrates/mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
                     <a href="../Substrates/engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
                 </div>
@@ -134,7 +178,7 @@
     <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
     <div class="dropdown-menu technology-menu">
         <div class="dropdown-category">
-            <a href="../../technology/caryo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+            <a href="../../technology/karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
         </div>
         
         <div class="dropdown-category">
@@ -178,14 +222,16 @@
       <p>High-strength spinosad suspension concentrate for severe pest infestations.</p>
       <a href="../../docs/Spindura-Pro.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
     </div>
+
     <div class="product-card">
-      <img src="/assets/img/Spindura Plus-bottle.png" alt="Spindura Rix">
+      <img src="/assets/img/Spindura Rix-bottle.png" alt="Spindura Rix">
       <h4>Spindura Rix (12% WSP)</h4>
       <p>Water-soluble powder for flexible field application and tank mixing compatibility.</p>
       <a href="../../docs/Spindura-Rix.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
     </div>
+
     <div class="product-card">
-      <img src="../../assets/img/placeholders/spindura-plus.jpg" alt="Spindura Plus">
+      <img src="/assets/img/Spindura Plus-bottle.png" alt="Spindura Plus">
       <h4>Spindura Plus (2.5% SC)</h4>
       <p>Low-concentration SC variant suitable for preventive and rotational pest management.</p>
       <a href="../../docs/Spindura-Plus.pdf" target="_blank" class="view-btn">Download Product Sheet</a>
@@ -272,11 +318,11 @@
             </div>
             
             <div class="footer-legal">
-                <p>© Kriya Ltd 2025 | <a href="/privacy-policy.html">Privacy Policy</a>
+                <p>© Kriya Ltd 2025 | <a href="../../privacy-policy.html">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <script src="/assets/js/script.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
